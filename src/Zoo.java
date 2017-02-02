@@ -1,5 +1,5 @@
 
-public class Testing {
+public class Zoo {
 
 	public static void main(String[] args) {
 
