@@ -4,7 +4,6 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-import com.philli.zoopackage.main.java.Bird;
 import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
 import com.philli.zoopackage.main.java.Snake;
 

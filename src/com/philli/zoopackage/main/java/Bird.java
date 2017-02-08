@@ -1,6 +1,6 @@
 package com.philli.zoopackage.main.java;
 
-public class Bird extends Animal {
+abstract class Bird extends Animal {
 
 	private String featherColour; 
 	private double wingSpan;

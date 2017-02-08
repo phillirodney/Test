@@ -25,9 +25,9 @@ public class Bat extends Mammal implements Flying {
 		// flight method
 		// if you weigh this much you can fly for this amount of time
 		if (getWeight() > 10) {
-			System.out.println("fat bat flies slower");
+			System.out.println("fat bat flies slower with a weight of " + getWeight());
 		} else {
-			System.out.println("bat flies fast");
+			System.out.println("bat flies fast with a weight of " + getWeight());
 
 		}
 	}
@@ -36,9 +36,9 @@ public class Bat extends Mammal implements Flying {
 	public void land() {
 		// land method
 		if (getWeight() > 10) {
-			System.out.println("2 landing attempts");
+			System.out.println("2 landing attempts with a weight of " + getWeight());
 		} else {
-			System.out.println("perfect landing first time");
+			System.out.println("perfect landing first time with a weight of " + getWeight());
 
 		}
 	}
@@ -46,6 +46,12 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void takeOff() {
 		// take off method
+		if (getWeight() > 10) {
+			System.out.println("with a weight of " + getWeight() + " take off speed is 8 m/s" );
+		} else {
+			System.out.println("with a weight of " + getWeight() + " take off speed is 2 m/s" );
+
+		}
 
 	}
 
