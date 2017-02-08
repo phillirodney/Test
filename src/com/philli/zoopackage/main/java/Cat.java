@@ -2,15 +2,13 @@ package com.philli.zoopackage.main.java;
 
 public class Cat extends Mammal {
 
-	private boolean endangered;
-	private boolean nocturnal;
+
 	private boolean dangerous;
 
 	public Cat(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure, boolean endangered, boolean nocturnal, boolean dangerous) {
-		super(age, name, species, breed, weight, height, enclosure);
+		super(age, name, species, breed, weight, height, enclosure, dangerous, dangerous);
 
-		this.endangered = endangered; 
-		this.nocturnal = nocturnal; 
+
 		this.dangerous = dangerous; 
 	}
 
@@ -22,36 +20,6 @@ public class Cat extends Mammal {
 	@Override
 	public void sprint() {
 		// overridden sprint method from RUN interface
-	}
-
-	/**
-	 * @return the endangered
-	 */
-	public boolean isEndangered() {
-		return endangered;
-	}
-
-	/**
-	 * @param endangered
-	 *            the endangered to set
-	 */
-	public void setEndangered(boolean endangered) {
-		this.endangered = endangered;
-	}
-
-	/**
-	 * @return the nocturnal
-	 */
-	public boolean isNocturnal() {
-		return nocturnal;
-	}
-
-	/**
-	 * @param nocturnal
-	 *            the nocturnal to set
-	 */
-	public void setNocturnal(boolean nocturnal) {
-		this.nocturnal = nocturnal;
 	}
 
 	/**

@@ -3,8 +3,8 @@ package com.philli.zoopackage.main.java;
 public class Amphibian extends Animal {
 
 	public Amphibian(int age, String name, String species, String breed, int weight, int height,
-			EnclosureType enclosure) {
-		super(age, name, species, breed, weight, height, enclosure);
+			EnclosureType enclosure, boolean endangered, boolean nocturnal) {
+		super(age, name, species, breed, weight, height, enclosure, endangered, endangered);
 	}
 
 	@Override
