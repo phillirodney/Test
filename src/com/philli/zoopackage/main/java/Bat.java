@@ -2,9 +2,9 @@ package com.philli.zoopackage.main.java;
 
 public class Bat extends Mammal implements Flying {
 
-	public Bat(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender);
+	public Bat(int age, String name, String species, int weight, int height,
+			EnclosureType worldOfWings, boolean nocturnal, boolean endangered, String gender) {
+		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender);
 		// user defined
 	}
 
@@ -16,7 +16,14 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void flight() {
 		// flight method
+		//if you weigh this much you can fly for this amount of time
+		if(getWeight() > 10) {
+			System.out.println("fat bat flies slower");
+		}
+		else  {
+			System.out.println("bat flies fast");
 
+		}
 	}
 
 	@Override
@@ -32,13 +39,13 @@ public class Bat extends Mammal implements Flying {
 
 	@Override
 	public void growth() {
-		// TODO Auto-generated method stub
+		// growth method
 		
 	}
 
 	@Override
 	public void sensitivity() {
-		// TODO Auto-generated method stub
+		// sensitivity
 		
 	}
 
