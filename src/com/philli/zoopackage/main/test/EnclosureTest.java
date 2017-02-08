@@ -10,14 +10,14 @@ public class EnclosureTest{
 	
 	@Test
 	public void testCreateEnclousreTestObject() {
-		EnclosureType e = EnclosureType.AMPHIBIAN; 
+		EnclosureType e = EnclosureType.AMPHIBIAN_ARCADE; 
 		assertNotNull(e);
 		
 	}
 	@Test
 	public void testCheckEnclosureHasAmphibian() {
-		EnclosureType testObject =  EnclosureType.AMPHIBIAN; 
-assertEquals(testObject, "AMPHIBIAN");
+		EnclosureType testObject =  EnclosureType.GUINEAPIG_GREENLAND; 
+assertEquals(testObject, "GUINEAPIG_GREENLAND");
 	}
 
 

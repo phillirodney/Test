@@ -18,7 +18,7 @@ public class AnimalTest {
 	 * @param height
 	 *
 	 */
-	Animal animal = new Animal(1, "salt", "mammal", "guineapig", 1, 1, EnclosureType.MAMMAL);
+	Animal animal = new Animal(1, "salt", "mammal", "guineapig", 1, 1, EnclosureType.GUINEAPIG_GREENLAND);
 
 	@Test
 	public void testGetAge() {
@@ -63,7 +63,7 @@ public class AnimalTest {
 	@Test
 	public void testGetEnclosureeType() {
 		EnclosureType enclosureType = animal.getEnclosureType();
-		assertEquals(enclosureType, EnclosureType.MAMMAL);
+		assertEquals(enclosureType, EnclosureType.GUINEAPIG_GREENLAND);
 	}
 	
 	@Test
