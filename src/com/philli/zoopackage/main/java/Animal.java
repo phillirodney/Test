@@ -1,4 +1,5 @@
 package com.philli.zoopackage.main.java;
+
 public class Animal {
 
 	private int age;
@@ -6,8 +7,7 @@ public class Animal {
 	private String species; 
 	private String breed; 
 	private int weight; 
-	private int height;
-		
+	private int height;		
 	/**
 	 * @param age
 	 * @param name
@@ -15,6 +15,7 @@ public class Animal {
 	 * @param breed
 	 * @param weight
 	 * @param height
+	 *
 	 */
 	public Animal(int age, String name, String species, String breed, int weight, int height) {
 		super();
