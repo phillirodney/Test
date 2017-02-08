@@ -28,6 +28,26 @@ this.setWingSpan(wingSpan);
 	@Override
 	public void growth() {
 		// growth method
+		if (getHeight()< 5) {
+			System.out.println("baby " + getSpecies());
+			
+		} else if (getHeight() > 5 && getHeight() < 10) {
+			System.out.println("young adult " + getSpecies());
+
+		}
+			else {
+				System.out.println("adult " + getSpecies());
+			}
+	}
+
+	
+	@Override
+	public void nutrition() {
+		if (getWeight() < 5) {
+			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
+		} else {
+			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+		}		
 	}
 
 	public String getFeatherColour() {
@@ -46,11 +66,4 @@ this.setWingSpan(wingSpan);
 		this.wingSpan = wingSpan;
 	}
 
-	@Override
-	public void nutrition() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
 }

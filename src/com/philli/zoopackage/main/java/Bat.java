@@ -12,10 +12,10 @@ public class Bat extends Mammal implements Flying {
 	public void nutrition() {
 		// overridden nutrition method
 		// if you weigh less than a number you need more nutrition
-		if (getWeight() < getWeight() * 0.5) {
-			System.out.println("malnurished, eat more");
+		if (getWeight()< 2) {
+			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
 		} else {
-			System.out.println("nutrition levels are acceptable");
+			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
 
 		}
 	}
@@ -53,10 +53,10 @@ public class Bat extends Mammal implements Flying {
 	public void growth() {
 		//growth method
 		//different heights and weights link to different grown sizes?
-		if (getHeight()< 5) {
+		if (getHeight()< 2) {
 			System.out.println("baby " + getSpecies());
 			
-		} else if (getHeight() > 5 && getHeight() < 20) {
+		} else if (getHeight() > 2 && getHeight() < 10) {
 			System.out.println("young adult " + getSpecies());
 
 		}
