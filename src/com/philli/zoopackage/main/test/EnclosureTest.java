@@ -17,8 +17,8 @@ public class EnclosureTest{
 	@Test
 	public void testCheckEnclosureHasAmphibian() {
 		EnclosureType testObject =  EnclosureType.AMPHIBIAN; 
-assertTrue("Enclose name does not match",testObject.name().compareTo("AMPHIBIAN")==0);
-}
+assertEquals(testObject, "AMPHIBIAN");
+	}
 
 
 
