@@ -19,4 +19,9 @@ public class CatTest {
 cat.setDangerous(true);		
 assertTrue("animal has been updated to status: not nocturnal", cat.isDangerous() == true);	}
 
+	@Test
+	public void testGetCatEnclosureType() {
+		EnclosureType e = EnclosureType.FELINE_FUN;
+		assertEquals(e, EnclosureType.FELINE_FUN);
+	}
 }

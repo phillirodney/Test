@@ -32,4 +32,9 @@ public class PenguinTest {
 		assertEquals(rel, "complicated");
 	}
 
+	@Test
+	public void testGetPenguinEnclosureType() {
+		EnclosureType e = EnclosureType.PENGUIN_SHORES;
+		assertEquals(e, EnclosureType.PENGUIN_SHORES);
+	}
 }

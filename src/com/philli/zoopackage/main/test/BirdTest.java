@@ -41,5 +41,9 @@ public class BirdTest {
 		assertFalse("wingSpan has not been modified", b.getWingSpan()!= 10.00);
 
 	}
-
+	@Test
+	public void testGetBirdEnclosureType() {
+		EnclosureType e = EnclosureType.WORLD_OF_WINGS;
+		assertEquals(e, EnclosureType.WORLD_OF_WINGS);
+	}
 }
