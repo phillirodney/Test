@@ -10,6 +10,7 @@ public interface LivingThing {
 	 * nutrition
 	 * respiration
 	 * sensitivity
+	 * These will be inherited by concrete classes
 	 */
 	void excretion();
 
