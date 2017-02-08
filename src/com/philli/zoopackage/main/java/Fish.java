@@ -32,6 +32,7 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void movement() {
 		// movement method
+		super.movement();
 	}
 
 	@Override
@@ -48,6 +49,7 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void respiration() {
 		// respiration method
+		super.respiration();
 	}
 
 	

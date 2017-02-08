@@ -12,22 +12,23 @@ public class BatTest {
 
 	@Test
 	public void testFlight() {
+		b.flight();
 
 	}
 
 	@Test
-	public void testNutition() {
-
+	public void testNutrition() {
+		b.nutrition();
 	}
 
 	@Test
 	public void testLand() {
-
+		b.land();
 	}
 
 	@Test
 	public void testGrowth() {
-
+		b.growth();
 	}
 
 }
