@@ -1,6 +1,6 @@
 package com.philli.zoopackage.main.java;
 
-public class Animal extends Enclosure implements LivingThing {
+public abstract class Animal extends Enclosure implements LivingThing {
 
 	private int age;
 	private String name;
