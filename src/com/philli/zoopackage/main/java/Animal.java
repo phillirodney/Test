@@ -1,6 +1,6 @@
 package com.philli.zoopackage.main.java;
 
-public class Animal extends Enclosure {
+public class Animal extends Enclosure implements LivingThing {
 
 	private int age;
 	private String name;
@@ -132,27 +132,43 @@ public class Animal extends Enclosure {
 	}
 
 	public void eat() {
-		//eat method
+		// eat method
 	}
 
+	@Override
 	public void excretion() {
-		//excretion method
+		// excretion method
+	}
+
+	@Override
+	public void growth() {
+		// growth method
+
+	}
+
+	@Override
+	public void movement() {
+		// movement method
+	}
+
+	@Override
+	public void nutrition() {
+		// nutrition method
+
+	}
+
+	@Override
+	public void respiration() {
+		// respiration method
+	}
+
+	@Override
+	public void sensitivity() {
+		// sensitivity method
 	}
 
 	public void reproduction() {
 		// reproduction method
 	}
 
-	public void respiration() {
-		// respiration method
-	}
-
-	public void movement() {
-		// movement method
-	}
-
-	public void sensitivity() {
-		//sensitivity method
-	}
-	
 }
