@@ -8,6 +8,9 @@ public class ZooMain {
 		System.out.println("Zoo Main");
 		Bat b = new Bat(11, "Batley", "fruitbat", 11, 5, EnclosureType.WORLD_OF_WINGS, false, false, "F");
 		b.flight();
-	}
+		b.nutrition();
+		b.land();
+		b.growth();
 
+	}
 }

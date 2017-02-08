@@ -25,9 +25,5 @@ public class Crocodile extends Reptile implements Swim {
 		
 	}
 
-	@Override
-	public void sensitivity() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 }

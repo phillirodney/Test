@@ -42,10 +42,6 @@ public class Cat extends Mammal {
 		
 	}
 
-	@Override
-	public void sensitivity() {
-		// TODO Auto-generated method stub
-		
-	}
+
 
 }

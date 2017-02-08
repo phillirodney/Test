@@ -16,6 +16,5 @@ public interface LivingThing {
 
 	void respiration();
 
-	void sensitivity();
 
 }

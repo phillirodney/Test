@@ -35,10 +35,6 @@ public class Fish extends Animal implements Swim {
 		// respiration method
 	}
 
-	@Override
-	public void sensitivity() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 }
