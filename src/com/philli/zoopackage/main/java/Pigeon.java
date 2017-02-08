@@ -1,10 +1,10 @@
 package com.philli.zoopackage.main.java;
 
-public class Pigeon extends Bird implements Flying{
+public class Pigeon extends Bird implements Flying {
 
-	public Pigeon(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender) {
-		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal, gender);
+	public Pigeon(int age, String name, String species, int weight, int height, EnclosureType enclosure,
+			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan);
 	}
 
 	@Override
@@ -14,14 +14,13 @@ public class Pigeon extends Bird implements Flying{
 
 	@Override
 	public void land() {
-		//land method
+		// land method
 	}
 
 	@Override
 	public void takeOff() {
-		//take off method
+		// take off method
 	}
-	
 
 	@Override
 	public void nutrition() {

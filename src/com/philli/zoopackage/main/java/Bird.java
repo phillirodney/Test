@@ -2,14 +2,34 @@ package com.philli.zoopackage.main.java;
 
 public class Bird extends Animal {
 
-	public Bird(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender) {
-		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal, gender);
-		
+	private String featherColour; 
+	private double wingSpan;
+	
+	public Bird(int age, String name, String species, int weight, int height, EnclosureType enclosure,
+			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender);
+this.setFeatherColour(featherColour); 
+this.setWingSpan(wingSpan);
 	}
 
 	@Override
 	public void growth() {
-		//growth method
+		// growth method
+	}
+
+	public String getFeatherColour() {
+		return featherColour;
+	}
+
+	public void setFeatherColour(String featherColour) {
+		this.featherColour = featherColour;
+	}
+
+	public double getWingSpan() {
+		return wingSpan;
+	}
+
+	public void setWingSpan(double wingSpan) {
+		this.wingSpan = wingSpan;
 	}
 }

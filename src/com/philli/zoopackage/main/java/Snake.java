@@ -2,22 +2,22 @@ package com.philli.zoopackage.main.java;
 
 public class Snake extends Reptile implements Swim {
 
-	private boolean venemous; 
-	private String colour; 
-	private String pattern; 
-	
-	public Snake(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure,
+	private boolean venemous;
+	private String colour;
+	private String pattern;
+
+	public Snake(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, boolean venemous, String colour, String pattern) {
-		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal, gender);
-		
-		this.venemous = venemous; 
-		this.colour = colour; 
-		this.pattern = pattern; 
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender);
+
+		this.venemous = venemous;
+		this.colour = colour;
+		this.pattern = pattern;
 	}
 
 	@Override
 	public void floats() {
-		//float method
+		// float method
 
 	}
 
