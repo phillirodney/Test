@@ -16,6 +16,16 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void growth() {
 		// growth method
+		if (getHeight()< 1) {
+			System.out.println("baby " + getSpecies());
+			
+		} else if (getHeight() > 1 && getHeight() < 2) {
+			System.out.println("young adult " + getSpecies());
+
+		}
+			else {
+				System.out.println("adult " + getSpecies());
+			}	
 
 	}
 
@@ -27,6 +37,11 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void nutrition() {
 		// nutrition method
+		if (getWeight() < 1) {
+			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
+		} else {
+			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+		}
 
 	}
 

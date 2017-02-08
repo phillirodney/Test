@@ -18,5 +18,11 @@ public class ZooMain {
 		Penguin penguin = new Penguin(3, "Captain Feathers", "emperor penguin", 8, 9, EnclosureType.WORLD_OF_WINGS, true, false, "M", "pink", 0, "single");
 		penguin.growth();
 		penguin.nutrition();
+		Cat cat = new Cat(5, "Mr Floofy Poofs", "Ocelot", 11, 10, EnclosureType.FELINE_FUN, false, false, "F", false);
+		cat.growth();
+		cat.nutrition();
+		cat.sprint();
+		
+		
 	}
 }

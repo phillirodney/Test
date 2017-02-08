@@ -16,13 +16,27 @@ public class Crocodile extends Reptile implements Swim {
 	@Override
 	public void nutrition() {
 		// nutrition method
+		if (getWeight()< 10) {
+			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
+		} else {
+			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+
+		}
 
 	}
 
 	@Override
 	public void growth() {
-		// TODO Auto-generated method stub
-		
+		if (getHeight()< 10) {
+			System.out.println("baby " + getSpecies());
+			
+		} else if (getHeight() > 10 && getHeight() < 40) {
+			System.out.println("young adult " + getSpecies());
+
+		}
+			else {
+				System.out.println("adult " + getSpecies());
+			}			
 	}
 
 	

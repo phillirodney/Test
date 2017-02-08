@@ -14,13 +14,33 @@ public class Cat extends Mammal {
 	@Override
 	public void nutrition() {
 		// overridden nutrition method
+		if (getWeight()< 5) {
+			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
+		} else {
+			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+
+		}
 	}
 
 	@Override
 	public void sprint() {
 		// overridden sprint method from RUN interface
+		super.sprint();
 	}
 
+	@Override
+	public void growth() {
+		if (getHeight()< 1) {
+			System.out.println("baby " + getSpecies());
+			
+		} else if (getHeight() > 1 && getHeight() < 5) {
+			System.out.println("young adult " + getSpecies());
+
+		}
+			else {
+				System.out.println("adult " + getSpecies());
+			}		
+	}
 	/**
 	 * @return the dangerous
 	 */
@@ -36,11 +56,7 @@ public class Cat extends Mammal {
 		this.dangerous = dangerous;
 	}
 
-	@Override
-	public void growth() {
-		// TODO Auto-generated method stub
-		
-	}
+	
 
 
 
