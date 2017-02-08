@@ -1,6 +1,6 @@
 package com.philli.zoopackage.main.java;
 
-public class Amphibian extends Animal {
+public class Amphibian extends Animal implements Swim{
 
 	public Amphibian(int age, String name, String species, String breed, int weight, int height,
 			EnclosureType enclosure, boolean endangered, boolean nocturnal) {
@@ -11,7 +11,7 @@ public class Amphibian extends Animal {
 	public void nutrition() {
 		// nutrition method
 	}
-
+	@Override
 	public void floats() {
 		// floats method
 	}

@@ -13,7 +13,6 @@ public class Mammal extends Animal implements Run {
 	}
 
 	@Override
-
 	public void growth() {
 		// growth method
 	}
