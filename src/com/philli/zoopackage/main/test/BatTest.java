@@ -12,10 +12,21 @@ public class BatTest {
 
 	@Test
 	public void testFlight() {
-		b.setWeight(2);
-		assertTrue("featherColour has been modified", b.getWeight() == 2);	
-		assertFalse("featherColour has been modified", b.getWeight() != 2);	
 
+	}
+
+	@Test
+	public void testNutition() {
+
+	}
+
+	@Test
+	public void testLand() {
+
+	}
+
+	@Test
+	public void testGrowth() {
 
 	}
 
