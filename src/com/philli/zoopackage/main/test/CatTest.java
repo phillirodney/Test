@@ -12,7 +12,7 @@ public class CatTest {
 	// int weight, int height, EnclosureType enclosure,
 	// boolean endangered, boolean nocturnal, String gender, boolean dangerous
 
-	Cat cat = new Cat(11, "Chrissy", "Persian", 0, 0, null, false, false, null, false);
+	Cat cat = new Cat(11, "Chrissy", "Persian", 0, 0, EnclosureType.FELINE_FUN, false, false, null, false);
 
 	@Test
 	public void testIsDangerous() {
