@@ -45,4 +45,22 @@ public class Snake extends Reptile implements Swim {
 		this.pattern = pattern;
 	}
 
+	@Override
+	public void growth() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void nutrition() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -124,19 +124,9 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.enclosure = enclosure;
 	}
 
-	public void eat() {
-		// eat method
-	}
-
 	@Override
 	public void excretion() {
 		// excretion method
-	}
-
-	@Override
-	public void growth() {
-		// growth method
-
 	}
 
 	@Override
@@ -145,23 +135,8 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	}
 
 	@Override
-	public void nutrition() {
-		// nutrition method
-
-	}
-
-	@Override
 	public void respiration() {
 		// respiration method
-	}
-
-	@Override
-	public void sensitivity() {
-		// sensitivity method
-	}
-
-	public void reproduction() {
-		// reproduction method
 	}
 
 	public boolean isEndangered() {

@@ -7,19 +7,5 @@ public abstract class Amphibian extends Animal implements Swim {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender);
 	}
 
-	@Override
-	public void nutrition() {
-		// nutrition method
-	}
-
-	@Override
-	public void floats() {
-		// floats method
-	}
-
-	@Override
-	public void growth() {
-		// growth method
-	}
 
 }

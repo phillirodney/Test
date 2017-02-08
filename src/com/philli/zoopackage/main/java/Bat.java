@@ -30,4 +30,16 @@ public class Bat extends Mammal implements Flying {
 
 	}
 
+	@Override
+	public void growth() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

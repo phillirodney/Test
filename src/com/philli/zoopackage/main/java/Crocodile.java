@@ -18,4 +18,16 @@ public class Crocodile extends Reptile implements Swim {
 		// nutrition method
 
 	}
+
+	@Override
+	public void growth() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
+	}
 }

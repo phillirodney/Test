@@ -36,4 +36,16 @@ public class Cat extends Mammal {
 		this.dangerous = dangerous;
 	}
 
+	@Override
+	public void growth() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -45,4 +45,16 @@ this.setWingSpan(wingSpan);
 	public void setWingSpan(double wingSpan) {
 		this.wingSpan = wingSpan;
 	}
+
+	@Override
+	public void nutrition() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
+		
+	}
 }

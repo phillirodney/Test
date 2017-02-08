@@ -8,16 +8,6 @@ public abstract class Mammal extends Animal implements Run {
 	}
 
 	@Override
-	public void reproduction() {
-		// reproduction method
-	}
-
-	@Override
-	public void growth() {
-		// growth method
-	}
-
-	@Override
 	public void sprint() {
 		// overridden run method, inherited from the Run interface
 	}
