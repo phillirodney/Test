@@ -18,7 +18,7 @@ public class AnimalTest {
 	 * @param height
 	 *
 	 */
-	Animal animal = new Animal(1, "salt", "mammal", "guineapig", 1, 1, EnclosureType.GUINEAPIG_GREENLAND, false, false);
+	Animal animal = new Animal(1, "salt", "mammal", "guineapig", 1, 1, EnclosureType.GUINEAPIG_GREENLAND, false, false, "M");
 
 	@Test
 	public void testGetAge() {
@@ -69,7 +69,7 @@ public class AnimalTest {
 	@Test
 	public void testConstructor() {
 		final int age = 2; 
-		Animal animal = new Animal(age, null, null, null, 0, 0, null, false, false);
+		Animal animal = new Animal(age, null, null, null, 0, 0, null, false, false, null);
 		assertEquals("constructor accepts int values",age, animal.getAge());
 	}
 	}

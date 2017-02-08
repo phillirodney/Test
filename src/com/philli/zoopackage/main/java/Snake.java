@@ -7,8 +7,8 @@ public class Snake extends Reptile implements Swim {
 	private String pattern; 
 	
 	public Snake(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, boolean venemous, String colour, String pattern) {
-		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal);
+			boolean endangered, boolean nocturnal, String gender, boolean venemous, String colour, String pattern) {
+		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal, gender);
 		
 		this.venemous = venemous; 
 		this.colour = colour; 

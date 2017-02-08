@@ -4,8 +4,9 @@ public class Penguin extends Bird implements Swim {
 
 	private String relationshipStatus; 
 	public Penguin(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal) {
-		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal);
+			boolean endangered, boolean nocturnal, String gender, String relationshipStatus) {
+		super(age, name, species, breed, weight, height, enclosure, endangered, nocturnal, gender);
+		this.relationshipStatus = relationshipStatus; 
 	}
 
 	@Override

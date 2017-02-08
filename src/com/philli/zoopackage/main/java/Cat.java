@@ -5,8 +5,8 @@ public class Cat extends Mammal {
 
 	private boolean dangerous;
 
-	public Cat(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure, boolean endangered, boolean nocturnal, boolean dangerous) {
-		super(age, name, species, breed, weight, height, enclosure, dangerous, dangerous);
+	public Cat(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure, boolean endangered, boolean nocturnal, String gender, boolean dangerous) {
+		super(age, name, species, breed, weight, height, enclosure, dangerous, nocturnal, gender);
 
 
 		this.dangerous = dangerous; 

@@ -10,6 +10,7 @@ public class Animal extends Enclosure implements LivingThing {
 	private int height;
 	private boolean endangered;
 	private boolean nocturnal;
+	private String gender;
 	/**
 	 * @param age
 	 * @param name
@@ -20,9 +21,10 @@ public class Animal extends Enclosure implements LivingThing {
 	 * @param enclosure
 	 * @param endangered 
 	 * @param nocturnal 
+	 * @param gender 
 	 *
 	 */
-	public Animal(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure, boolean endangered, boolean nocturnal) {
+	public Animal(int age, String name, String species, String breed, int weight, int height, EnclosureType enclosure, boolean endangered, boolean nocturnal, String gender) {
 		super(enclosure);
 		this.age = age;
 		this.name = name;
@@ -33,6 +35,7 @@ public class Animal extends Enclosure implements LivingThing {
 		this.enclosure = enclosure;
 		this.endangered = endangered; 
 		this.nocturnal = nocturnal;
+		this.gender = gender;
 	}
 
 	/**
@@ -190,6 +193,14 @@ public class Animal extends Enclosure implements LivingThing {
 
 	public void setNocturnal(boolean nocturnal) {
 		this.nocturnal = nocturnal;
+	}
+
+	public String getGender() {
+		return gender;
+	}
+
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 
 }
