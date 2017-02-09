@@ -27,7 +27,7 @@ public class CatTest {
 	 * @param respRate
 	 * @param sensResp
 	 */
-	Cat cat = new Cat(11, "Chrissy", "Persian", 10, 20, EnclosureType.FELINE_FUN, false, false, null, false, 3, 0,
+	Cat cat = new Cat(11, "Chrissy", "Persian", 10, 20, EnclosureType.FELINE_FUN, true, true, "F", false, 3, 0,
 			"baby", "large", 0, null);
 
 	/**
@@ -48,7 +48,37 @@ public class CatTest {
 		cat.growth();
 		assertEquals("adult", cat.getStage());
 	}
+	/**
+	 * gender = F
+	 * excretion = 0 + 10
+	 */
+	@Test
+	public void testReproduction() {
+		cat.reproduction();
+		assertEquals(10, cat.getExcretion());
+	}
 
+	/**
+	 * excretion = 0 
+	 * sensResp = normal
+	 */
+	@Test
+	public void testSensitivity() {
+		cat.sensitivity();
+		assertEquals("normal", cat.getSensResp());
+	}
+	
+	/**
+	 * excretion = 100
+	 * sensResp = normal
+	 */
+	@Test
+	public void testSetExcretionAndGetSensitivity() {
+		cat.setExcretion(100);
+		cat.sensitivity();
+		assertEquals("shiver", cat.getSensResp());
+	}
+	
 	@Test
 	public void testIsDangerous() {
 		cat.setDangerous(true);
