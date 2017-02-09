@@ -43,7 +43,7 @@ public class Bat extends Mammal implements Flying {
 			this.setWeight(getWeight() + 2);
 
 			break;
-		case "adult":
+		case "adult ":
 			this.setWeight(getWeight() + 3);
 			break;
 		default:

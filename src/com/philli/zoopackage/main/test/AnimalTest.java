@@ -67,7 +67,7 @@ public class AnimalTest {
 	public void testSetName() {
 		penguin.setName("Cheeky Chappy");
 		;
-		assertTrue(penguin.getName().equals("Cheeky Chappy"));
+		assertTrue(("Cheeky Chappy").equals(penguin.getName()));
 	}
 
 	@Test

@@ -11,23 +11,32 @@ public abstract class Mammal extends Animal implements Run {
 
 	@Override
 	public void sprint() {
-		// overridden run method, inherited from the Run interface
-		// not all mammals can sprint
-		// current speed , top speed, distance.
-		if (getEnclosureType().equals(EnclosureType.AMPHIBIAN_ARCADE)) {
-			System.out.println(getSpecies() + "cannot sprint");
-		} else if (getEnclosureType().equals(EnclosureType.FELINE_FUN)) {
-			System.out.println(getSpecies() + "will sprint");
-		} else if (getEnclosureType().equals(EnclosureType.FISH_PARADISE)) {
-			System.out.println(getSpecies() + "cannot sprint");
-		} else if (getEnclosureType().equals(EnclosureType.GUINEAPIG_GREENLAND)) {
-			System.out.println(getSpecies() + "will sprint");
-		} else if (getEnclosureType().equals(EnclosureType.PENGUIN_SHORES)) {
-			System.out.println(getSpecies() + "will sprint");
-		} else if (getEnclosureType().equals(EnclosureType.REPTILE_CREEK)) {
-			System.out.println(getSpecies() + "will sprint");
-		} else if (getEnclosureType().equals(EnclosureType.WORLD_OF_WINGS)) {
-			System.out.println(getSpecies() + "will sprint");
+		switch (enclosure) {
+		case AMPHIBIAN_ARCADE:
+			this.setEnclosureSize("extra small");
+			break;
+		case FELINE_FUN:
+			this.setEnclosureSize("extra large");
+			break;
+		case FISH_PARADISE:
+			this.setEnclosureSize("medium");
+			break;
+		case GUINEAPIG_GREENLAND:
+			this.setEnclosureSize("large");
+			break;
+		case PENGUIN_SHORES:
+			this.setEnclosureSize("super large");
+			break;
+		case REPTILE_CREEK:
+			this.setEnclosureSize("extra extra large");
+			break;
+		case WORLD_OF_WINGS:
+			this.setEnclosureSize("medium large");
+			break;
+		default:
+			this.setEnclosureSize("small");
+			break;
+
 		}
 	}
 }
