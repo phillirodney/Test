@@ -10,6 +10,7 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	private boolean endangered;
 	private boolean nocturnal;
 	private String gender;
+	private int hoursAfterEating;
 
 	/**
 	 * @param age
@@ -22,10 +23,11 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	 * @param endangered
 	 * @param nocturnal
 	 * @param gender
+	 * @param hoursAfterEating
 	 *
 	 */
 	public Animal(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender) {
+			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating) {
 		super(enclosure);
 		this.age = age;
 		this.name = name;
@@ -36,6 +38,55 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.endangered = endangered;
 		this.nocturnal = nocturnal;
 		this.gender = gender;
+		this.hoursAfterEating = hoursAfterEating;
+	}
+
+	@Override
+	public void excretion() {
+
+		if (hoursAfterEating < 2) {
+			System.out.println(getName() + "may be sick");
+		} else {
+			System.out.println(getName() + "is exreting at a normal rate");
+
+		}
+	}
+
+	@Override
+	public void movement() {
+		// movement method
+		if (isEndangered() == true) {
+			System.out.println(getName() + "needs a new enclosure of" + getEnclosureType() + "to breed");
+		} else {
+			System.out.println(getName() + "does not need to be moved from" + getEnclosureType() + "right now");
+
+		}
+
+	}
+
+	@Override
+	public void respiration() {
+		// respiration method
+		switch (hoursAfterEating) {
+		case 1:
+			System.out.println(getName() + "is breathing too slowly");
+			break;
+		case 2:
+			System.out.println(getName() + "is breathing  slowly");
+			break;
+		case 3:
+			System.out.println(getName() + "is breathing  regulary");
+			break;
+		case 4:
+			System.out.println(getName() + "is breathing  quickly");
+			break;
+		case 5:
+			System.out.println(getName() + "is breathing too quickly");
+			break;
+		default:
+			System.out.println(getName() + "is sleeping and breathing regularly");
+			break;
+		}
 	}
 
 	/**
@@ -124,21 +175,6 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.enclosure = enclosure;
 	}
 
-	@Override
-	public void excretion() {
-		// excretion method
-	}
-
-	@Override
-	public void movement() {
-		// movement method
-	}
-
-	@Override
-	public void respiration() {
-		// respiration method
-	}
-
 	public boolean isEndangered() {
 		return endangered;
 	}
@@ -161,6 +197,14 @@ public abstract class Animal extends Enclosure implements LivingThing {
 
 	public void setGender(String gender) {
 		this.gender = gender;
+	}
+
+	public int getHoursAfterEating() {
+		return hoursAfterEating;
+	}
+
+	public void setHoursAfterEating(int hoursAfterEating) {
+		this.hoursAfterEating = hoursAfterEating;
 	}
 
 }

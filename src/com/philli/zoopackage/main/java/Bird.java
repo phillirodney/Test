@@ -17,10 +17,11 @@ abstract class Bird extends Animal {
 	 * @param gender
 	 * @param featherColour
 	 * @param wingSpan
+	 * @param hoursAfterEating 
 	 */
 	public Bird(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender);
+			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan, int hoursAfterEating) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating);
 this.setFeatherColour(featherColour); 
 this.setWingSpan(wingSpan);
 	}
@@ -41,14 +42,7 @@ this.setWingSpan(wingSpan);
 	}
 
 	
-	@Override
-	public void nutrition() {
-		if (getWeight() < 5) {
-			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
-		} else {
-			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
-		}		
-	}
+	
 
 	public String getFeatherColour() {
 		return featherColour;

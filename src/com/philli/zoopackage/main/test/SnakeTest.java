@@ -10,7 +10,7 @@ import com.philli.zoopackage.main.java.Snake;
 public class SnakeTest {
 
 	Snake s = new Snake(2, "fanta", "albino cornsnake", 2, 2, EnclosureType.REPTILE_CREEK, false, true, "f", false,
-			"coral", "pentagons");
+			"coral", "pentagons", 1);
 
 	@Test
 	public void testGetSpecies() {

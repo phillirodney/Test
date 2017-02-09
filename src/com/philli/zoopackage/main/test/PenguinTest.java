@@ -24,7 +24,7 @@ public class PenguinTest {
 	 * @param relationshipStatus
 	 */
 	Penguin p = new Penguin(24, "Andrew", "Great Emperor", 9, 1, EnclosureType.PENGUIN_SHORES, false, false, "M",
-			"grey", 1.00, "complicated");
+			"grey", 1.00, "complicated", 2);
 
 	@Test
 	public void testGetRelationshipStatus() {
