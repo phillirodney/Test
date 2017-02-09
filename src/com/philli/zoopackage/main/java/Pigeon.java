@@ -13,9 +13,9 @@ public class Pigeon extends Bird implements Flying {
 	public void flight() {
 		// flight method
 		if (getWeight() > 25) {
-			System.out.println("fat pigeon flies slower with a weight of " + getWeight());
+			this.setRespRate(getRespRate()+ 20);
 		} else {
-			System.out.println("pigeon flies fast with a weight of " + getWeight());
+			this.setRespRate(getRespRate()+ 5);
 
 		}
 
@@ -65,13 +65,10 @@ public class Pigeon extends Bird implements Flying {
 
 	@Override
 	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName()
-					+ " will have a gestation period of 17-19 days. She will sit on the eggs from late afternoon to 10am");
-		} else if (getGender().equals("M")) {
-			System.out.println(getName() + " will do the day shift when looking after the eggs");
+		if (("F").equals(getGender())) {
+			setExcretion(getExcretion() + 2);
 		} else {
-			System.out.println(getName() + " is complicated");
+			this.setEnclosureSize("small");
 		}
 	}
 

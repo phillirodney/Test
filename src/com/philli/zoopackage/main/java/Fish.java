@@ -58,13 +58,10 @@ public class Fish extends Animal implements Swim {
 
 	@Override
 	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName()
-					+ " will have a gestation period of 21-30 days, will lay anywhere between 2-2000 eggs and will feed their young with milk");
-		} else if (getGender().equals("M")) {
-			System.out.println(getName() + " is male and cannot reproduce");
+		if (("F").equals(getGender())) {
+			setExcretion(getExcretion() + 3);
 		} else {
-			System.out.println(getName() + " is complicated");
+			this.setEnclosureSize("small");
 		}
 	}
 

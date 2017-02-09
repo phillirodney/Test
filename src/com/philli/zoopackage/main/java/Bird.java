@@ -36,14 +36,13 @@ abstract class Bird extends Animal {
 	@Override
 	public void growth() {
 		// growth method
-		if (getHeight() < 5) {
-			System.out.println("baby " + getSpecies());
-
-		} else if (getHeight() > 5 && getHeight() < 10) {
-			System.out.println("young adult " + getSpecies());
-
+		if (getHeight() < 2) {
+			this.setStage("baby");
+		} else if (getHeight() > 1 && getHeight() < 20) {
+			this.setStage("young adult");
 		} else {
-			System.out.println("adult " + getSpecies());
+			this.setStage("adult");
+
 		}
 	}
 

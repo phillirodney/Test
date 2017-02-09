@@ -60,13 +60,10 @@ public class Penguin extends Bird implements Swim {
 
 	@Override
 	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName()
-					+ " will have a gestation period of 63 days and will take turns with the male penguin to incubate the egg");
-		} else if (getGender().equals("M")) {
-			System.out.println(getName() + " will incubate the egg while the female penguin goes off to feed");
+		if (("F").equals(getGender())) {
+			setExcretion(getExcretion() + 10);
 		} else {
-			System.out.println(getName() + " is complicated");
+			this.setEnclosureSize("small");
 		}
 	}
 

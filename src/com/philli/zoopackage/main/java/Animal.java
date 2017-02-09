@@ -55,13 +55,6 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.respRate = respRate;
 	}
 
-	/*
-	 * Animal(int hoursAfterEating, int excretion, String stage, String
-	 * enclosureSize, int respRate) { super(enclosure); this.hoursAfterEating =
-	 * hoursAfterEating; this.excretion = excretion; this.stage = stage;
-	 * this.enclosureSize = enclosureSize; this.respRate = respRate; }
-	 */
-
 	@Override
 	public void excretion() {
 

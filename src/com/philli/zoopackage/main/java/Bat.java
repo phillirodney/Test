@@ -36,9 +36,9 @@ public class Bat extends Mammal implements Flying {
 		// flight method
 		// if you weigh this much you can fly for this amount of time
 		if (getWeight() > 10) {
-			System.out.println("fat bat flies slower with a weight of " + getWeight());
+			this.setRespRate(getRespRate()+ 10);
 		} else {
-			System.out.println("bat flies fast with a weight of " + getWeight());
+			this.setRespRate(getRespRate()+ 5);
 
 		}
 	}
@@ -46,24 +46,13 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void land() {
 		// land method
-		if (getWeight() > 10) {
-			System.out.println("2 landing attempts with a weight of " + getWeight());
-		} else {
-			System.out.println("perfect landing first time with a weight of " + getWeight());
-
-		}
+	
 	}
 
 	@Override
 	public void takeOff() {
 		// take off method
-		if (getWeight() > 10) {
-			System.out.println("with a weight of " + getWeight() + " take off speed is 50 m/s");
-		} else {
-			System.out.println("with a weight of " + getWeight() + " take off speed is 100 m/s");
-
-		}
-
+	
 	}
 
 	@Override
@@ -82,23 +71,20 @@ public class Bat extends Mammal implements Flying {
 
 	@Override
 	public void movement() {
-		if (getWeight() < 5) {
-			System.out.println("weight is " + getWeight() + getName() + "is moving quickly");
+		if (("adult").equals(getStage())) {
+			this.setEnclosureSize("large");
 		} else {
-			System.out.println("weight is " + getWeight() + getName() + "is moving at a normal pace");
+			this.setEnclosureSize("small");
 		}
 
 	}
 
 	@Override
 	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName()
-					+ " will have a gestation period of 40 days to 6 months and will feed their young with milk");
-		} else if (getGender().equals("M")) {
-			System.out.println(getName() + " is male and cannot reproduce");
+		if (("F").equals(getGender())) {
+			setExcretion(getExcretion() + 6);
 		} else {
-			System.out.println(getName() + " is complicated");
+			this.setEnclosureSize("small");
 		}
 	}
 

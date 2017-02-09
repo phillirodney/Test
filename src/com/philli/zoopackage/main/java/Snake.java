@@ -56,12 +56,10 @@ public class Snake extends Reptile implements Swim {
 
 	@Override
 	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName() + " will have a gestation period of 3 - 9 months");
-		} else if (getGender().equals("M")) {
-			System.out.println(getName() + " is male and cannot reproduce");
+		if (("F").equals(getGender())) {
+			setExcretion(getExcretion() + 11);
 		} else {
-			System.out.println(getName() + " is complicated");
+			this.setEnclosureSize("small");
 		}
 	}
 
