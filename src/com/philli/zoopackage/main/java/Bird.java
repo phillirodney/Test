@@ -23,12 +23,13 @@ abstract class Bird extends Animal {
 	 * @param stage
 	 * @param enclosureSize
 	 * @param respRate
+	 * @param sensResp 
 	 */
 	public Bird(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan,
-			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate) {
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
-				stage, enclosureSize, respRate);
+				stage, enclosureSize, respRate, sensResp);
 		this.setFeatherColour(featherColour);
 		this.setWingSpan(wingSpan);
 	}

@@ -4,9 +4,9 @@ public class Bat extends Mammal implements Flying {
 
 	public Bat(int age, String name, String species, int weight, int height, EnclosureType worldOfWings,
 			boolean nocturnal, boolean endangered, String gender, int hoursAfterEating, int excretion, String stage,
-			String enclosureSize, int respRate) {
+			String enclosureSize, int respRate, String sensResp) {
 		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender, hoursAfterEating,
-				excretion, stage, enclosureSize, respRate);
+				excretion, stage, enclosureSize, respRate, sensResp);
 		// user defined
 	}
 
@@ -82,7 +82,7 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void reproduction() {
 		if (("F").equals(getGender())) {
-			setExcretion(getExcretion() + 6);
+			setExcretion(getExcretion() + 1);
 		} else {
 			this.setEnclosureSize("small");
 		}
@@ -90,7 +90,12 @@ public class Bat extends Mammal implements Flying {
 
 	@Override
 	public void sensitivity() {
-
+		if (getExcretion() > 20) {
+			this.setSensResp("sweat");
+		}
+		else {
+			this.setSensResp("normal");
+		}
 	}
 
 }

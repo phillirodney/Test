@@ -15,6 +15,7 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	private String stage;
 	private String enclosureSize;
 	private int respRate;
+	private String sensResp;
 
 	/**
 	 * @param age
@@ -32,12 +33,13 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	 * @param stage
 	 * @param enclosureSize
 	 * @param respRate
+	 * @param sensResp 
 	 *
 	 */
 
 	public Animal(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
-			String enclosureSize, int respRate) {
+			String enclosureSize, int respRate, String sensResp) {
 		super(enclosure);
 		this.age = age;
 		this.name = name;
@@ -53,6 +55,7 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.stage = stage;
 		this.enclosureSize = enclosureSize;
 		this.respRate = respRate;
+		this.sensResp = sensResp;
 	}
 
 	@Override
@@ -253,6 +256,14 @@ public abstract class Animal extends Enclosure implements LivingThing {
 
 	public void setRespRate(int respRate) {
 		this.respRate = respRate;
+	}
+
+	public String getSensResp() {
+		return sensResp;
+	}
+
+	public void setSensResp(String sensResp) {
+		this.sensResp = sensResp;
 	}
 
 }

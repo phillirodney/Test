@@ -4,9 +4,9 @@ public class Pigeon extends Bird implements Flying {
 
 	public Pigeon(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan,
-			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate) {
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
-				hoursAfterEating, excretion, stage, enclosureSize, respRate);
+				hoursAfterEating, excretion, stage, enclosureSize, respRate, sensResp);
 	}
 
 	@Override
@@ -74,8 +74,12 @@ public class Pigeon extends Bird implements Flying {
 
 	@Override
 	public void sensitivity() {
-		// TODO Auto-generated method stub
-
+		if (getExcretion() > 20) {
+			this.setSensResp("cold sweats");
+		}
+		else {
+			this.setSensResp("normal");
+		}
 	}
 
 }

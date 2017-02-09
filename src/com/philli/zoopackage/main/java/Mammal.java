@@ -4,9 +4,9 @@ public abstract class Mammal extends Animal implements Run {
 
 	public Mammal(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
-			String enclosureSize, int respRate) {
+			String enclosureSize, int respRate, String sensResp) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
-				stage, enclosureSize, respRate);
+				stage, enclosureSize, respRate, sensResp);
 	}
 
 	@Override

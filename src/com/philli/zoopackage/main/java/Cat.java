@@ -6,9 +6,9 @@ public class Cat extends Mammal {
 
 	public Cat(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, boolean dangerous, int hoursAfterEating,
-			int excretion, String stage, String enclosureSize, int respRate) {
+			int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
-				stage, enclosureSize, respRate);
+				stage, enclosureSize, respRate, sensResp);
 
 		this.dangerous = dangerous;
 	}
@@ -56,8 +56,12 @@ public class Cat extends Mammal {
 
 	@Override
 	public void sensitivity() {
-		// TODO Auto-generated method stub
-
+		if (getExcretion() > 30) {
+			this.setSensResp("shiver");
+		}
+		else {
+			this.setSensResp("normal");
+		}
 	}
 
 	/**
