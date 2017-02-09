@@ -8,12 +8,46 @@ import com.philli.zoopackage.main.java.Cat;
 import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
 
 public class CatTest {
-	// int age, String name, String species, String breed,
-	// int weight, int height, EnclosureType enclosure,
-	// boolean endangered, boolean nocturnal, String gender, boolean dangerous
+	/**
+	 * 
+	 * @param age
+	 * @param name
+	 * @param species
+	 * @param weight
+	 * @param height
+	 * @param enclosure
+	 * @param endangered
+	 * @param nocturnal
+	 * @param gender
+	 * @param dangerous
+	 * @param hoursAfterEating
+	 * @param excretion
+	 * @param stage
+	 * @param enclosureSize
+	 * @param respRate
+	 * @param sensResp
+	 */
+	Cat cat = new Cat(11, "Chrissy", "Persian", 10, 20, EnclosureType.FELINE_FUN, false, false, null, false, 3, 0,
+			"baby", "large", 0, null);
 
-	Cat cat = new Cat(11, "Chrissy", "Persian", 0, 0, EnclosureType.FELINE_FUN, false, false, null, false, 3, 0,
-			"young adult", "large", 0);
+	/**
+	 * stage = baby weight = 10 + 2
+	 */
+	@Test
+	public void testNutrition() {
+		cat.nutrition();
+		assertEquals(12, cat.getWeight());
+	}
+
+	/**
+	 * height = 20 
+	 * stage = adult
+	 */
+	@Test
+	public void testGrowth() {
+		cat.growth();
+		assertEquals("adult", cat.getStage());
+	}
 
 	@Test
 	public void testIsDangerous() {
@@ -27,13 +61,4 @@ public class CatTest {
 		assertEquals(e, EnclosureType.FELINE_FUN);
 	}
 
-	@Test
-	public void testNutrition() {
-		cat.nutrition();
-	}
-
-	@Test
-	public void testGrowth() {
-
-	}
 }

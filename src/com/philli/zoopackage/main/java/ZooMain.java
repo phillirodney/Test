@@ -1,7 +1,7 @@
 package com.philli.zoopackage.main.java;
 
 import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
-
+/*
 public class ZooMain {
 
 	public static void main(String[] args) {
@@ -11,7 +11,7 @@ public class ZooMain {
 		// age, name, species, weight, height, worldOfWings, nocturnal,
 		// endangered, gender
 		Bat bat = new Bat(20, "Batley", "fruitbat", 2, 20, EnclosureType.WORLD_OF_WINGS, false, false, "F", 1, 0,
-				"young adult", "large", 0);
+				"young adult", "large", 0, "shiver");
 		bat.flight();
 		bat.nutrition();
 		bat.land();
@@ -20,22 +20,22 @@ public class ZooMain {
 		System.out.println("\n");
 
 		Cat cat = new Cat(5, "Mr Floofy Poofs", "Ocelot", 11, 10, EnclosureType.FELINE_FUN, false, false, "F", false, 0,
-				0, "young adult", "large", 0);
+				0, "young adult", "large", 0, "shiver");
 		cat.growth();
 		cat.nutrition();
 		cat.sprint();
 		System.out.println("\n");
 
 		Crocodile croc = new Crocodile(150, "noot noot", "broad snouted caiman", 80, 90, EnclosureType.REPTILE_CREEK,
-				false, false, "M", 0, 0, "young adult", "large", 0);
+				false, false, "M", 0, 0, "young adult", "large", 0, "shiver");
 		croc.nutrition();
-		croc.floats();
+		croc.swim();
 		croc.growth();
 		System.out.println("\n");
 
 		Fish fish = new Fish(2, "Sarah", "black ghost knifefish", 3, 5, EnclosureType.FISH_PARADISE, false, false, "F",
-				0, 0, "young adult", "large", 0);
-		fish.floats();
+				0, 0, "young adult", "large", 0,"shiver");
+		fish.swim();
 		fish.growth();
 		fish.movement();
 		fish.nutrition();
@@ -47,13 +47,13 @@ public class ZooMain {
 		// boolean endangered, boolean nocturnal, String gender, String
 		// featherColour, double wingSpan
 		Penguin penguin = new Penguin(3, "Captain Feathers", "emperor penguin", 8, 9, EnclosureType.WORLD_OF_WINGS,
-				true, false, "M", "pink", 0, "single", 0, 0, "young adult", "large", 0);
+				true, false, "M", "pink", 0, "single", 0, 0, "young adult", "large", 0,"shiver");
 		penguin.growth();
 		penguin.nutrition();
 		System.out.println("\n");
 
 		Pigeon pigeon = new Pigeon(30, "Greg", "nicobar pigeon", 10, 10, EnclosureType.WORLD_OF_WINGS, false, false,
-				"F", "yellow", 10, 0, 0, "baby", "extra small", 0);
+				"F", "yellow", 10, 0, 0, "baby", "extra small", 0,"shiver");
 		pigeon.flight();
 		pigeon.land();
 		pigeon.takeOff();
@@ -61,9 +61,10 @@ public class ZooMain {
 		System.out.println("\n");
 
 		Snake snake = new Snake(4, "Cola", "cornsnake", 5, 7, EnclosureType.REPTILE_CREEK, false, false, "F", false,
-				"black", "circles", 0, 0, "baby", "small", 0);
-		snake.floats();
+				"black", "circles", 0, 0, "baby", "small", 0,"shiver");
+		snake.swim();
 		System.out.println("\n");
 
 	}
 }
+*/

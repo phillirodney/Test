@@ -10,12 +10,6 @@ public class Fish extends Animal implements Swim {
 	}
 
 	@Override
-	public void floats() {
-		// float method
-
-	}
-
-	@Override
 	public void growth() {
 		// growth method
 		if (getHeight() < 1) {
@@ -51,12 +45,6 @@ public class Fish extends Animal implements Swim {
 	}
 
 	@Override
-	public void respiration() {
-		// respiration method
-		super.respiration();
-	}
-
-	@Override
 	public void reproduction() {
 		if (("F").equals(getGender())) {
 			setExcretion(getExcretion() + 3);
@@ -69,10 +57,28 @@ public class Fish extends Animal implements Swim {
 	public void sensitivity() {
 		if (getExcretion() > 100) {
 			this.setSensResp("vomit");
-		}
-		else {
+		} else {
 			this.setSensResp("normal");
 		}
 	}
 
+	@Override
+	public void swim() {
+		int swimSpeed = 0;
+		switch (getStage()) {
+		case "baby":
+			swimSpeed = 500;
+			break;
+		case "young adult":
+			swimSpeed = 800;
+			break;
+		case "adult":
+			swimSpeed = 750;
+			break;
+		default:
+			swimSpeed = 600;
+			break;
+		}
+
+	}
 }

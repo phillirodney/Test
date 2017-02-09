@@ -23,7 +23,7 @@ public class Penguin extends Bird implements Swim {
 	 * @param stage
 	 * @param enclosureSize
 	 * @param respRate
-	 * @param sensResp 
+	 * @param sensResp
 	 */
 	public Penguin(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan,
@@ -32,12 +32,6 @@ public class Penguin extends Bird implements Swim {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
 				hoursAfterEating, excretion, stage, enclosureSize, respRate, sensResp);
 		this.relationshipStatus = relationshipStatus;
-	}
-
-	@Override
-	public void floats() {
-		// float method
-
 	}
 
 	@Override
@@ -72,9 +66,27 @@ public class Penguin extends Bird implements Swim {
 	public void sensitivity() {
 		if (getExcretion() > 30) {
 			this.setSensResp("shiver");
-		}
-		else {
+		} else {
 			this.setSensResp("normal");
+		}
+	}
+
+	@Override
+	public void swim() {
+		int swimSpeed = 0;
+		switch (getStage()) {
+		case "baby":
+			swimSpeed = 300;
+			break;
+		case "young adult":
+			swimSpeed = 500;
+			break;
+		case "adult":
+			swimSpeed = 400;
+			break;
+		default:
+			swimSpeed = 350;
+			break;
 		}
 	}
 
@@ -85,4 +97,5 @@ public class Penguin extends Bird implements Swim {
 	public void setRelationshipStatus(String relationshipStatus) {
 		this.relationshipStatus = relationshipStatus;
 	}
+
 }

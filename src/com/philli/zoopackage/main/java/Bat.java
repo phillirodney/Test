@@ -2,11 +2,32 @@ package com.philli.zoopackage.main.java;
 
 public class Bat extends Mammal implements Flying {
 
+	private int flightSpeed;
+/**
+ * 
+ * @param age
+ * @param name
+ * @param species
+ * @param weight
+ * @param height
+ * @param worldOfWings
+ * @param nocturnal
+ * @param endangered
+ * @param gender
+ * @param hoursAfterEating
+ * @param excretion
+ * @param stage
+ * @param enclosureSize
+ * @param respRate
+ * @param sensResp
+ * @param flightSpeed
+ */
 	public Bat(int age, String name, String species, int weight, int height, EnclosureType worldOfWings,
 			boolean nocturnal, boolean endangered, String gender, int hoursAfterEating, int excretion, String stage,
-			String enclosureSize, int respRate, String sensResp) {
+			String enclosureSize, int respRate, String sensResp, int flightSpeed) {
 		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender, hoursAfterEating,
 				excretion, stage, enclosureSize, respRate, sensResp);
+		this.flightSpeed = flightSpeed;
 		// user defined
 	}
 
@@ -33,26 +54,46 @@ public class Bat extends Mammal implements Flying {
 
 	@Override
 	public void flight() {
-		// flight method
-		// if you weigh this much you can fly for this amount of time
 		if (getWeight() > 10) {
-			this.setRespRate(getRespRate()+ 10);
+			this.flightSpeed = 100;
 		} else {
-			this.setRespRate(getRespRate()+ 5);
-
+			this.flightSpeed = 200;
 		}
 	}
 
 	@Override
 	public void land() {
 		// land method
-	
+		switch (flightSpeed) {
+		case 100: this.setRespRate(200);
+			break;
+		case 200: this.setRespRate(300);
+			break;
+		case 300: this.setRespRate(400);
+			break;
+		default: this.setRespRate(100);
+			break;
+		}
 	}
 
 	@Override
 	public void takeOff() {
 		// take off method
-	
+		switch (getWeight()) {
+		case 10:
+			this.flightSpeed = 400;
+			break;
+		case 20:
+			this.flightSpeed = 300;
+			break;
+		case 30:
+			this.flightSpeed = 100;
+			break;
+		default:
+			this.flightSpeed = 150;
+
+			break;
+		}
 	}
 
 	@Override
@@ -82,9 +123,9 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void reproduction() {
 		if (("F").equals(getGender())) {
-			setExcretion(getExcretion() + 1);
+			setExcretion(getExcretion() + 2);
 		} else {
-			this.setEnclosureSize("small");
+			setExcretion(getExcretion());
 		}
 	}
 
@@ -92,10 +133,17 @@ public class Bat extends Mammal implements Flying {
 	public void sensitivity() {
 		if (getExcretion() > 20) {
 			this.setSensResp("sweat");
-		}
-		else {
+		} else {
 			this.setSensResp("normal");
 		}
+	}
+
+	public int getFlightSpeed() {
+		return flightSpeed;
+	}
+
+	public void setFlightSpeed(int flightSpeed) {
+		this.flightSpeed = flightSpeed;
 	}
 
 }

@@ -18,12 +18,6 @@ public class Snake extends Reptile implements Swim {
 	}
 
 	@Override
-	public void floats() {
-		// float method
-
-	}
-
-	@Override
 	public void growth() {
 		if (getHeight() < 40) {
 			this.setStage("baby");
@@ -67,9 +61,27 @@ public class Snake extends Reptile implements Swim {
 	public void sensitivity() {
 		if (getExcretion() > 5) {
 			this.setSensResp("fever");
-		}
-		else {
+		} else {
 			this.setSensResp("normal");
+		}
+	}
+
+	@Override
+	public void swim() {
+		int swimSpeed = 0;
+		switch (getStage()) {
+		case "baby":
+			swimSpeed = 600;
+			break;
+		case "young adult":
+			swimSpeed = 1000;
+			break;
+		case "adult":
+			swimSpeed = 800;
+			break;
+		default:
+			swimSpeed = 750;
+			break;
 		}
 	}
 

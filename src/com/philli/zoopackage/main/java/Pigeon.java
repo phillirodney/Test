@@ -2,11 +2,14 @@ package com.philli.zoopackage.main.java;
 
 public class Pigeon extends Bird implements Flying {
 
+	private int flightSpeed;
+
 	public Pigeon(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan,
-			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp, int flightSpeed) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
 				hoursAfterEating, excretion, stage, enclosureSize, respRate, sensResp);
+		this.flightSpeed = flightSpeed;
 	}
 
 	@Override
@@ -24,22 +27,35 @@ public class Pigeon extends Bird implements Flying {
 	@Override
 	public void land() {
 		// land method
-		if (getWeight() > 25) {
-			System.out.println("2 landing attempts with a weight of " + getWeight());
-		} else {
-			System.out.println("perfect landing first time with a weight of " + getWeight());
-
+		switch (flightSpeed) {
+		case 100: this.setRespRate(150);
+			break;
+		case 200: this.setRespRate(100);
+			break;
+		case 300: this.setRespRate(50);
+			break;
+		default: this.setRespRate(75);
+			break;
 		}
 	}
 
 	@Override
 	public void takeOff() {
 		// take off method
-		if (getWeight() > 25) {
-			System.out.println("with a weight of " + getWeight() + " take off speed is 30 m/s");
-		} else {
-			System.out.println("with a weight of " + getWeight() + " take off speed is 60 m/s");
+		switch (getWeight()) {
+		case 10:
+			this.setFlightSpeed(300);
+			break;
+		case 20:
+			this.setFlightSpeed(200);
+			break;
+		case 30:
+			this.setFlightSpeed(100);
+			break;
+		default:
+			this.setFlightSpeed(150);
 
+			break;
 		}
 	}
 
@@ -80,6 +96,14 @@ public class Pigeon extends Bird implements Flying {
 		else {
 			this.setSensResp("normal");
 		}
+	}
+
+	public int getFlightSpeed() {
+		return flightSpeed;
+	}
+
+	public void setFlightSpeed(int flightSpeed) {
+		this.flightSpeed = flightSpeed;
 	}
 
 }

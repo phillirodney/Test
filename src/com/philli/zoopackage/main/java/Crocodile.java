@@ -9,11 +9,7 @@ public class Crocodile extends Reptile implements Swim {
 				stage, enclosureSize, respRate, sensResp);
 	}
 
-	@Override
-	public void floats() {
-		// float method
-
-	}
+	
 
 	@Override
 	public void nutrition() {
@@ -64,6 +60,27 @@ public class Crocodile extends Reptile implements Swim {
 		else {
 			this.setSensResp("normal");
 		}
+	}
+
+
+
+	@Override
+	public void swim() {
+		int swimSpeed = 0;
+		switch (getStage()) {
+		case "baby":
+			swimSpeed = 200;
+			break;
+		case "young adult":
+			swimSpeed = 300;
+			break;
+		case "adult":
+			swimSpeed = 250;
+			break;
+		default:
+			swimSpeed = 125;
+			break;
+		}		
 	}
 
 }
