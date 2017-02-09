@@ -58,7 +58,7 @@ public class Penguin extends Bird implements Swim {
 		if (("F").equals(getGender())) {
 			setExcretion(getExcretion() + 10);
 		} else {
-			this.setEnclosureSize("small");
+			setExcretion(getExcretion());
 		}
 	}
 
