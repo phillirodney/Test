@@ -78,6 +78,6 @@ public class AnimalTest {
 	@Test
 	public void testSetSpecies() {
 		snake.setSpecies("orange mamba");
-		assertTrue(snake.getSpecies().equals("orange mamba"));
+		assertTrue(("orange mamba").equals(snake.getSpecies()));
 	}
 }
