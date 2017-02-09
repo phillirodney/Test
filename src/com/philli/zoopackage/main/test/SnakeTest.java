@@ -31,7 +31,7 @@ public class SnakeTest {
 	 * @param sensResp
 	 */
 	Snake s = new Snake(2, "fanta", "albino cornsnake", 2, 2, 
-			EnclosureType.REPTILE_CREEK, false, true, "f", false,
+			EnclosureType.REPTILE_CREEK, false, true, "F", false,
 			"coral", "pentagons", 1, 0, "young adult", "large", 0, null);
 
 	/**
@@ -42,6 +42,39 @@ public class SnakeTest {
 	public void testGrowth() {
 		s.growth();
 		assertEquals("baby", s.getStage());
+	}
+	/**
+	 * stage = young adult 
+	 * weight = 2 + 15
+	 */
+	@Test
+	public void testNutrition() {
+		s.nutrition();
+		assertEquals(17, s.getWeight());
+	}
+	
+	/**
+	 * gender = F
+	 * excretion = 0 + 11
+	 */
+	@Test
+	public void testReproduction() {
+		s.reproduction();
+		assertEquals(11, s.getExcretion());
+	}
+	
+	/**
+	 * excretion = 0 
+	 * sens resp = cold
+	 */
+	@Test
+	public void testSensitivity() {
+		s.sensitivity();
+		assertEquals("cold", s.getSensResp());	}
+	
+	@Test
+	public void testSwim() {
+		
 	}
 	
 	
