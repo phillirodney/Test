@@ -36,30 +36,46 @@ public class CrocodileTest {
 		assertEquals(5, croc.getAge());
 	}
 
+	/**
+	 * stage young adult weight = 50 + 50
+	 */
 	@Test
 	public void testNutrition() {
 		croc.nutrition();
-		assertEquals();
+		assertEquals(70, croc.getWeight());
 	}
 
+	/**
+	 * height = 40 stage = young adult
+	 */
 	@Test
 	public void testGrowth() {
-		fail("Not yet implemented");
+		croc.growth();
+		assertEquals("young adult", croc.getStage());
 	}
 
+	/**
+	 * gender = M excretion = 20 + 5
+	 */
 	@Test
 	public void testReproduction() {
-		fail("Not yet implemented");
+		croc.reproduction();
+		assertEquals(25, croc.getExcretion());
 	}
 
+	/**
+	 * excretion = 20 
+	 * sensResp = normal
+	 */
 	@Test
 	public void testSensitivity() {
-		fail("Not yet implemented");
+		croc.sensitivity();
+		assertEquals("normal", croc.getSensResp());
 	}
 
 	@Test
 	public void testSwim() {
-		fail("Not yet implemented");
+		
 	}
 
 }
