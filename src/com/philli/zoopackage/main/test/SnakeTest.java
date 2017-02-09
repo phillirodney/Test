@@ -9,9 +9,42 @@ import com.philli.zoopackage.main.java.Snake;
 
 public class SnakeTest {
 
-	Snake s = new Snake(2, "fanta", "albino cornsnake", 2, 2, EnclosureType.REPTILE_CREEK, false, true, "f", false,
+	/**
+	 * 
+	 * @param age
+	 * @param name
+	 * @param species
+	 * @param weight
+	 * @param height
+	 * @param enclosure
+	 * @param endangered
+	 * @param nocturnal
+	 * @param gender
+	 * @param venemous
+	 * @param colour
+	 * @param pattern
+	 * @param hoursAfterEating
+	 * @param excretion
+	 * @param stage
+	 * @param enclosureSize
+	 * @param respRate
+	 * @param sensResp
+	 */
+	Snake s = new Snake(2, "fanta", "albino cornsnake", 2, 2, 
+			EnclosureType.REPTILE_CREEK, false, true, "f", false,
 			"coral", "pentagons", 1, 0, "young adult", "large", 0, null);
 
+	/**
+	 * height = 2
+	 * stage = baby 
+	 */
+	@Test
+	public void testGrowth() {
+		s.growth();
+		assertEquals("baby", s.getStage());
+	}
+	
+	
 	@Test
 	public void testGetSpecies() {
 		String species = s.getSpecies();

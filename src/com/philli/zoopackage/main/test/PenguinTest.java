@@ -29,7 +29,7 @@ public class PenguinTest {
 	 * @param respRate
 	 * @param sensResp
 	 */
-	Penguin p = new Penguin(24, "Andrew", "Great Emperor", 9, 1, 
+	Penguin p = new Penguin(24, "Marty", "Great Emperor", 9, 1, 
 			EnclosureType.PENGUIN_SHORES, false, false, "M",
 			"grey", 1.00, "complicated", 2, 0, "young adult", "large", 0, null);
 

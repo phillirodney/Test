@@ -3,7 +3,27 @@ package com.philli.zoopackage.main.java;
 public class Pigeon extends Bird implements Flying {
 
 	private int flightSpeed;
-
+/**
+ * 
+ * @param age
+ * @param name
+ * @param species
+ * @param weight
+ * @param height
+ * @param enclosure
+ * @param endangered
+ * @param nocturnal
+ * @param gender
+ * @param featherColour
+ * @param wingSpan
+ * @param hoursAfterEating
+ * @param excretion
+ * @param stage
+ * @param enclosureSize
+ * @param respRate
+ * @param sensResp
+ * @param flightSpeed
+ */
 	public Pigeon(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan,
 			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp, int flightSpeed) {
@@ -82,9 +102,9 @@ public class Pigeon extends Bird implements Flying {
 	@Override
 	public void reproduction() {
 		if (("F").equals(getGender())) {
-			setExcretion(getExcretion() + 2);
+			setExcretion(getExcretion() + 100);
 		} else {
-			this.setEnclosureSize("small");
+			setExcretion(getExcretion() + 60);
 		}
 	}
 
