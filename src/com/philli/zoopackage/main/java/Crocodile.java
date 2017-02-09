@@ -83,7 +83,7 @@ public class Crocodile extends Reptile implements Swim {
 
 	@Override
 	public void swim() {
-		int swimSpeed = 0;
+		/*int swimSpeed = 0;
 		switch (getStage()) {
 		case "baby":
 			swimSpeed = 200;
@@ -97,7 +97,7 @@ public class Crocodile extends Reptile implements Swim {
 		default:
 			swimSpeed = 125;
 			break;
-		}		
+		}		*/
 	}
 
 }

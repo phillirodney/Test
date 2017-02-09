@@ -20,11 +20,11 @@ public class AnimalTest {
 	Crocodile croc = new Crocodile(150, "noot noot", "broad snouted caiman", 80, 90, EnclosureType.REPTILE_CREEK, false,
 			false, "M", 0, 0, "young adult", "large", 0, "shiver");
 	Fish fish = new Fish(2, "Sarah", "black ghost knifefish", 3, 5, EnclosureType.FISH_PARADISE, false, false, "F", 0,
-			0, "young adult", "large", 0, "shiver");
+			0, "young adult", "large", 0, "shiver", 0);
 	Penguin penguin = new Penguin(3, "Captain Feathers", "emperor penguin", 8, 9, EnclosureType.WORLD_OF_WINGS, true,
-			false, "M", "pink", 0, "single", 3, 0, "young adult", "large", 0, "shiver");
+			false, "M", "pink", 0, "single", 3, 0, "young adult", "large", 0, "shiver", 100);
 	Snake snake = new Snake(4, "Cola", "cornsnake", 5, 7, EnclosureType.REPTILE_CREEK, false, false, "F", false,
-			"black", "circles", 0, 0, "young adult", "large", 20, "shiver");
+			"black", "circles", 0, 0, "young adult", "large", 20, "shiver", 0);
 
 	@Test
 	public void testExcretion() {

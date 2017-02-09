@@ -1,29 +1,34 @@
 package com.philli.zoopackage.main.java;
 
 public class Fish extends Animal implements Swim {
-/**
- * 
- * @param age
- * @param name
- * @param species
- * @param weight
- * @param height
- * @param enclosure
- * @param endangered
- * @param nocturnal
- * @param gender
- * @param hoursAfterEating
- * @param excretion
- * @param stage
- * @param enclosureSize
- * @param respRate
- * @param sensResp
- */
+	private int swimSpeed;
+
+	/**
+	 * 
+	 * @param age
+	 * @param name
+	 * @param species
+	 * @param weight
+	 * @param height
+	 * @param enclosure
+	 * @param endangered
+	 * @param nocturnal
+	 * @param gender
+	 * @param hoursAfterEating
+	 * @param excretion
+	 * @param stage
+	 * @param enclosureSize
+	 * @param respRate
+	 * @param sensResp
+	 * @param swimSpeed
+	 */
 	public Fish(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
-			String enclosureSize, int respRate, String sensResp) {
+			String enclosureSize, int respRate, String sensResp, int swimSpeed) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
 				stage, enclosureSize, respRate, sensResp);
+
+		this.swimSpeed = swimSpeed;
 	}
 
 	@Override
@@ -81,21 +86,29 @@ public class Fish extends Animal implements Swim {
 
 	@Override
 	public void swim() {
-		int swimSpeed = 0;
 		switch (getStage()) {
 		case "baby":
-			swimSpeed = 500;
+			this.setSwimSpeed(500);
 			break;
 		case "young adult":
-			swimSpeed = 800;
+			this.setSwimSpeed(1000);
 			break;
 		case "adult":
-			swimSpeed = 750;
+			this.setSwimSpeed(2000);
 			break;
 		default:
-			swimSpeed = 600;
+			this.setSwimSpeed(650);
 			break;
 		}
+	}
 
+	
+
+	public int getSwimSpeed() {
+		return swimSpeed;
+	}
+
+	public void setSwimSpeed(int swimSpeed) {
+		this.swimSpeed = swimSpeed;
 	}
 }

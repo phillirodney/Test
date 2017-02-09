@@ -5,6 +5,7 @@ public class Snake extends Reptile implements Swim {
 	private boolean venemous;
 	private String colour;
 	private String pattern;
+	private int swimSpeed;
 
 	/**
 	 * 
@@ -26,16 +27,19 @@ public class Snake extends Reptile implements Swim {
 	 * @param enclosureSize
 	 * @param respRate
 	 * @param sensResp
+	 * @param swimSpeed 
 	 */
 	public Snake(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, boolean venemous, String colour, String pattern,
-			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp, int swimSpeed) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
 				stage, enclosureSize, respRate, sensResp);
 
 		this.venemous = venemous;
 		this.colour = colour;
 		this.pattern = pattern;
+		this.swimSpeed = swimSpeed;
+
 	}
 
 	@Override
@@ -89,19 +93,18 @@ public class Snake extends Reptile implements Swim {
 
 	@Override
 	public void swim() {
-		int swimSpeed = 0;
 		switch (getStage()) {
 		case "baby":
-			swimSpeed = 600;
+			this.setSwimSpeed(300);
 			break;
 		case "young adult":
-			swimSpeed = 1000;
+			this.setSwimSpeed(600);
 			break;
 		case "adult":
-			swimSpeed = 800;
+			this.setSwimSpeed(1000);
 			break;
 		default:
-			swimSpeed = 750;
+			this.setSwimSpeed(350);
 			break;
 		}
 	}
@@ -128,6 +131,14 @@ public class Snake extends Reptile implements Swim {
 
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
+	}
+
+	public int getSwimSpeed() {
+		return swimSpeed;
+	}
+
+	public void setSwimSpeed(int swimSpeed) {
+		this.swimSpeed = swimSpeed;
 	}
 
 }

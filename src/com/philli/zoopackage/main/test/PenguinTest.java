@@ -31,7 +31,8 @@ public class PenguinTest {
 	 */
 	Penguin p = new Penguin(24, "Marty", "Great Emperor", 9, 1, 
 			EnclosureType.PENGUIN_SHORES, false, false, "M",
-			"grey", 1.00, "complicated", 2, 0, "young adult", "large", 0, null);
+			"grey", 1.00, "complicated", 2, 0, "young adult",
+			"large", 0, null, 800);
 
 	/**
 	 * stage = young adult weight = 9 + 40
@@ -65,9 +66,21 @@ public class PenguinTest {
 
 	@Test
 	public void testSwim() {
-
+		p.swim();
+		assertEquals(500, p.getSwimSpeed());
 	}
 
+	@Test
+	public void testGetSwimSpeed() {
+		assertEquals(800, p.getSwimSpeed());
+	}
+	
+	@Test
+	public void testSetSwimSpeed() {
+		p.setSwimSpeed(1000);
+		assertTrue(p.getSwimSpeed()==1000);
+	}
+	
 	@Test
 	public void testGetRelationshipStatus() {
 		String rel = p.getRelationshipStatus();

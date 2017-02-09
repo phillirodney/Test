@@ -3,7 +3,7 @@ package com.philli.zoopackage.main.java;
 public class Penguin extends Bird implements Swim {
 
 	private String relationshipStatus;
-
+	private int swimSpeed;
 	/**
 	 * 
 	 * @param age
@@ -24,14 +24,16 @@ public class Penguin extends Bird implements Swim {
 	 * @param enclosureSize
 	 * @param respRate
 	 * @param sensResp
+	 * @param swimSpeed 
 	 */
 	public Penguin(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan,
 			String relationshipStatus, int hoursAfterEating, int excretion, String stage, String enclosureSize,
-			int respRate, String sensResp) {
+			int respRate, String sensResp, int swimSpeed) {
 		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
 				hoursAfterEating, excretion, stage, enclosureSize, respRate, sensResp);
 		this.relationshipStatus = relationshipStatus;
+		this.swimSpeed = swimSpeed;
 	}
 
 	@Override
@@ -73,19 +75,18 @@ public class Penguin extends Bird implements Swim {
 
 	@Override
 	public void swim() {
-		int swimSpeed = 0;
 		switch (getStage()) {
 		case "baby":
-			swimSpeed = 300;
+			this.swimSpeed = 300;
 			break;
 		case "young adult":
-			swimSpeed = 500;
+			this.swimSpeed = 500;
 			break;
 		case "adult":
-			swimSpeed = 400;
+			this.swimSpeed = 400;
 			break;
 		default:
-			swimSpeed = 350;
+			this.swimSpeed = 350;
 			break;
 		}
 	}
@@ -96,6 +97,14 @@ public class Penguin extends Bird implements Swim {
 
 	public void setRelationshipStatus(String relationshipStatus) {
 		this.relationshipStatus = relationshipStatus;
+	}
+
+	public int getSwimSpeed() {
+		return swimSpeed;
+	}
+
+	public void setSwimSpeed(int swimSpeed) {
+		this.swimSpeed = swimSpeed;
 	}
 
 }

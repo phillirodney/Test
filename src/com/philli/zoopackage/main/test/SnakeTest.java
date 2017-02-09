@@ -32,7 +32,7 @@ public class SnakeTest {
 	 */
 	Snake s = new Snake(2, "fanta", "albino cornsnake", 2, 2, 
 			EnclosureType.REPTILE_CREEK, false, true, "F", false,
-			"coral", "pentagons", 1, 0, "young adult", "large", 0, null);
+			"coral", "pentagons", 1, 0, "young adult", "large", 0, null, 3000);
 
 	/**
 	 * height = 2
@@ -74,9 +74,20 @@ public class SnakeTest {
 	
 	@Test
 	public void testSwim() {
-		
+		s.swim();
+		assertEquals(600, s.getSwimSpeed());
+	}
+
+	@Test
+	public void testGetSwimSpeed() {
+		assertEquals(3000, s.getSwimSpeed());
 	}
 	
+	@Test
+	public void testSetSwimSpeed() {
+		s.setSwimSpeed(700);
+		assertTrue(s.getSwimSpeed()==700);
+	}
 	
 	@Test
 	public void testGetSpecies() {

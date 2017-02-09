@@ -29,7 +29,7 @@ public class FishTest {
 	 */
 
 	Fish fish = new Fish(3, "Destiny", "whale fish", 20, 2, EnclosureType.FISH_PARADISE, true, true, "F", 8, 6,
-			"adult", "extra large", 300, "normal");
+			"adult", "extra large", 300, "normal", 1000);
 
 	@Test
 	public void testFish() {
@@ -77,9 +77,21 @@ public class FishTest {
 		fish.sensitivity();
 		assertEquals("normal", fish.getSensResp());	}
 
-	/*@Test
+	@Test
 	public void testSwim() {
-		fail("Not yet implemented");
-	}*/
+		fish.swim();
+		assertEquals(2000, fish.getSwimSpeed());
+	}
+
+	@Test
+	public void testGetSwimSpeed() {
+		assertEquals(1000, fish.getSwimSpeed());
+	}
+	
+	@Test
+	public void testSetSwimSpeed() {
+		fish.setSwimSpeed(1500);
+		assertTrue(fish.getSwimSpeed()==1500);
+	}
 
 }
