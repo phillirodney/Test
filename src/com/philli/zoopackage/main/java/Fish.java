@@ -3,8 +3,10 @@ package com.philli.zoopackage.main.java;
 public class Fish extends Animal implements Swim {
 
 	public Fish(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating);
+			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
+			String enclosureSize, int respRate) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
+				stage, enclosureSize, respRate);
 	}
 
 	@Override
@@ -16,28 +18,34 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void growth() {
 		// growth method
-		if (getHeight()< 1) {
-			System.out.println("baby " + getSpecies());
-			
+		if (getHeight() < 1) {
+			this.setStage("baby");
 		} else if (getHeight() > 1 && getHeight() < 2) {
-			System.out.println("young adult " + getSpecies());
+			this.setStage("young adult");
+		} else {
+			this.setStage("adult");
 
 		}
-			else {
-				System.out.println("adult " + getSpecies());
-			}	
 
 	}
-
-
 
 	@Override
 	public void nutrition() {
 		// nutrition method
-		if (getWeight() < 1) {
-			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
-		} else {
-			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+		switch (getStage()) {
+		case "baby":
+			this.setWeight(getWeight() + 1);
+			break;
+		case "young adult":
+			this.setWeight(getWeight() + 2);
+
+			break;
+		case "adult":
+			this.setWeight(getWeight() + 3);
+			break;
+		default:
+			this.setWeight(getWeight());
+			break;
 		}
 
 	}
@@ -51,21 +59,19 @@ public class Fish extends Animal implements Swim {
 	@Override
 	public void reproduction() {
 		if (getGender().equals("F")) {
-			System.out.println(getName() + " will have a gestation period of 21-30 days, will lay anywhere between 2-2000 eggs and will feed their young with milk");
-		} else if (getGender().equals("M")){
+			System.out.println(getName()
+					+ " will have a gestation period of 21-30 days, will lay anywhere between 2-2000 eggs and will feed their young with milk");
+		} else if (getGender().equals("M")) {
 			System.out.println(getName() + " is male and cannot reproduce");
-		}
-		else {
+		} else {
 			System.out.println(getName() + " is complicated");
-		}			
+		}
 	}
 
 	@Override
 	public void sensitivity() {
 		// TODO Auto-generated method stub
-		
-	}
 
-	
+	}
 
 }

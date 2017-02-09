@@ -11,6 +11,10 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	private boolean nocturnal;
 	private String gender;
 	private int hoursAfterEating;
+	private int excretion;
+	private String stage;
+	private String enclosureSize;
+	private int respRate;
 
 	/**
 	 * @param age
@@ -24,10 +28,16 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	 * @param nocturnal
 	 * @param gender
 	 * @param hoursAfterEating
+	 * @param excretion
+	 * @param stage
+	 * @param enclosureSize
+	 * @param respRate
 	 *
 	 */
+
 	public Animal(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating) {
+			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
+			String enclosureSize, int respRate) {
 		super(enclosure);
 		this.age = age;
 		this.name = name;
@@ -39,15 +49,26 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.nocturnal = nocturnal;
 		this.gender = gender;
 		this.hoursAfterEating = hoursAfterEating;
+		this.excretion = excretion;
+		this.stage = stage;
+		this.enclosureSize = enclosureSize;
+		this.respRate = respRate;
 	}
+
+	/*
+	 * Animal(int hoursAfterEating, int excretion, String stage, String
+	 * enclosureSize, int respRate) { super(enclosure); this.hoursAfterEating =
+	 * hoursAfterEating; this.excretion = excretion; this.stage = stage;
+	 * this.enclosureSize = enclosureSize; this.respRate = respRate; }
+	 */
 
 	@Override
 	public void excretion() {
 
 		if (hoursAfterEating < 2) {
-			System.out.println(getName() + "may be sick");
+			this.excretion = 0;
 		} else {
-			System.out.println(getName() + "is exreting at a normal rate");
+			this.excretion = excretion + 1;
 
 		}
 	}
@@ -55,11 +76,19 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	@Override
 	public void movement() {
 		// movement method
-		if (isEndangered() == true) {
-			System.out.println(getName() + "needs a new enclosure of" + getEnclosureType() + "to breed");
-		} else {
-			System.out.println(getName() + "does not need to be moved from" + getEnclosureType() + "right now");
-
+		switch (stage) {
+		case "baby":
+			this.enclosureSize = "small";
+			break;
+		case "young adult":
+			this.enclosureSize = "large";
+			break;
+		case "adult":
+			this.enclosureSize = "extra large";
+			break;
+		default:
+			this.enclosureSize = "standard medium enclosure";
+			break;
 		}
 
 	}
@@ -67,24 +96,18 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	@Override
 	public void respiration() {
 		// respiration method
-		switch (hoursAfterEating) {
-		case 1:
-			System.out.println(getName() + "is breathing too slowly");
+		switch (stage) {
+		case "baby":
+			this.respRate = 50;
 			break;
-		case 2:
-			System.out.println(getName() + "is breathing  slowly");
+		case "young adult":
+			this.respRate = 80;
 			break;
-		case 3:
-			System.out.println(getName() + "is breathing  regulary");
-			break;
-		case 4:
-			System.out.println(getName() + "is breathing  quickly");
-			break;
-		case 5:
-			System.out.println(getName() + "is breathing too quickly");
+		case "adult":
+			this.respRate = 60;
 			break;
 		default:
-			System.out.println(getName() + "is sleeping and breathing regularly");
+			this.respRate = 75;
 			break;
 		}
 	}
@@ -205,6 +228,38 @@ public abstract class Animal extends Enclosure implements LivingThing {
 
 	public void setHoursAfterEating(int hoursAfterEating) {
 		this.hoursAfterEating = hoursAfterEating;
+	}
+
+	public int getExcretion() {
+		return excretion;
+	}
+
+	public void setExcretion(int excretion) {
+		this.excretion = excretion;
+	}
+
+	public String getStage() {
+		return stage;
+	}
+
+	public void setStage(String stage) {
+		this.stage = stage;
+	}
+
+	public String getEnclosureSize() {
+		return enclosureSize;
+	}
+
+	public void setEnclosureSize(String enclosureSize) {
+		this.enclosureSize = enclosureSize;
+	}
+
+	public int getRespRate() {
+		return respRate;
+	}
+
+	public void setRespRate(int respRate) {
+		this.respRate = respRate;
 	}
 
 }

@@ -3,8 +3,10 @@ package com.philli.zoopackage.main.java;
 public class Bat extends Mammal implements Flying {
 
 	public Bat(int age, String name, String species, int weight, int height, EnclosureType worldOfWings,
-			boolean nocturnal, boolean endangered, String gender, int hoursAfterEating) {
-		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender, hoursAfterEating);
+			boolean nocturnal, boolean endangered, String gender, int hoursAfterEating, int excretion, String stage,
+			String enclosureSize, int respRate) {
+		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender, hoursAfterEating,
+				excretion, stage, enclosureSize, respRate);
 		// user defined
 	}
 
@@ -12,11 +14,20 @@ public class Bat extends Mammal implements Flying {
 	public void nutrition() {
 		// overridden nutrition method
 		// if you weigh less than a number you need more nutrition
-		if (getWeight() < 2) {
-			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
-		} else {
-			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+		switch (getStage()) {
+		case "baby":
+			this.setWeight(getWeight() + 1);
+			break;
+		case "young adult":
+			this.setWeight(getWeight() + 2);
 
+			break;
+		case "adult":
+			this.setWeight(getWeight() + 3);
+			break;
+		default:
+			this.setWeight(getWeight());
+			break;
 		}
 	}
 
@@ -58,15 +69,13 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void growth() {
 		// growth method
-		// different heights and weights link to different grown sizes?
 		if (getHeight() < 2) {
-			System.out.println("baby " + getSpecies());
-
-		} else if (getHeight() > 2 && getHeight() < 10) {
-			System.out.println("young adult " + getSpecies());
-
+			this.setStage("baby");
+		} else if (getHeight() > 2 && getHeight() < 5) {
+			this.setStage("young adult");
 		} else {
-			System.out.println("adult " + getSpecies());
+			this.setStage("adult");
+
 		}
 
 	}
@@ -84,18 +93,17 @@ public class Bat extends Mammal implements Flying {
 	@Override
 	public void reproduction() {
 		if (getGender().equals("F")) {
-			System.out.println(getName() + " will have a gestation period of 40 days to 6 months and will feed their young with milk");
-		} else if (getGender().equals("M")){
+			System.out.println(getName()
+					+ " will have a gestation period of 40 days to 6 months and will feed their young with milk");
+		} else if (getGender().equals("M")) {
 			System.out.println(getName() + " is male and cannot reproduce");
-		}
-		else {
+		} else {
 			System.out.println(getName() + " is complicated");
 		}
 	}
 
 	@Override
 	public void sensitivity() {
-	
 
 	}
 

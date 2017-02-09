@@ -8,8 +8,9 @@ public class Snake extends Reptile implements Swim {
 
 	public Snake(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, boolean venemous, String colour, String pattern,
-			int hoursAfterEating) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating);
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
+				stage, enclosureSize, respRate);
 
 		this.venemous = venemous;
 		this.colour = colour;
@@ -19,6 +20,54 @@ public class Snake extends Reptile implements Swim {
 	@Override
 	public void floats() {
 		// float method
+
+	}
+
+	@Override
+	public void growth() {
+		if (getHeight() < 40) {
+			this.setStage("baby");
+		} else if (getHeight() > 40 && getHeight() < 300) {
+			this.setStage("young adult");
+		} else {
+			this.setStage("adult");
+
+		}
+	}
+
+	@Override
+	public void nutrition() {
+		switch (getStage()) {
+		case "baby":
+			this.setWeight(getWeight() + 10);
+			break;
+		case "young adult":
+			this.setWeight(getWeight() + 15);
+
+			break;
+		case "adult":
+			this.setWeight(getWeight() + 20);
+			break;
+		default:
+			this.setWeight(getWeight());
+			break;
+		}
+	}
+
+	@Override
+	public void reproduction() {
+		if (getGender().equals("F")) {
+			System.out.println(getName() + " will have a gestation period of 3 - 9 months");
+		} else if (getGender().equals("M")) {
+			System.out.println(getName() + " is male and cannot reproduce");
+		} else {
+			System.out.println(getName() + " is complicated");
+		}
+	}
+
+	@Override
+	public void sensitivity() {
+		// TODO Auto-generated method stub
 
 	}
 
@@ -44,47 +93,6 @@ public class Snake extends Reptile implements Swim {
 
 	public void setPattern(String pattern) {
 		this.pattern = pattern;
-	}
-
-	@Override
-	public void growth() {
-		if (getHeight() < 5) {
-			System.out.println("baby " + getSpecies());
-
-		} else if (getHeight() > 5 && getHeight() < 30) {
-			System.out.println("young adult " + getSpecies());
-
-		} else {
-			System.out.println("adult " + getSpecies());
-		}
-	}
-
-	@Override
-	public void nutrition() {
-		if (getWeight() < 2) {
-			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
-		} else {
-			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
-
-		}
-	}
-
-	@Override
-	public void reproduction() {
-		if (getGender().equals("F")) {
-			System.out.println(getName() + " will have a gestation period of 3 - 9 months");
-		} else if (getGender().equals("M")){
-			System.out.println(getName() + " is male and cannot reproduce");
-		}
-		else {
-			System.out.println(getName() + " is complicated");
-		}	
-	}
-
-	@Override
-	public void sensitivity() {
-		// TODO Auto-generated method stub
-
 	}
 
 }

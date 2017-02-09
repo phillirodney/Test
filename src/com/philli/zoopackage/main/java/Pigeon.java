@@ -3,8 +3,10 @@ package com.philli.zoopackage.main.java;
 public class Pigeon extends Bird implements Flying {
 
 	public Pigeon(int age, String name, String species, int weight, int height, EnclosureType enclosure,
-			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan, int hoursAfterEating) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan, hoursAfterEating);
+			boolean endangered, boolean nocturnal, String gender, String featherColour, int wingSpan,
+			int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate) {
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
+				hoursAfterEating, excretion, stage, enclosureSize, respRate);
 	}
 
 	@Override
@@ -44,30 +46,39 @@ public class Pigeon extends Bird implements Flying {
 	@Override
 	public void nutrition() {
 		// nutrition method
-		if (getWeight() < 5) {
-			System.out.println("weight is " + getWeight() + ", malnurished, eat more");
-		} else {
-			System.out.println("weight is " + getWeight() + ", nutrition levels are acceptable");
+		switch (getStage()) {
+		case "baby":
+			this.setWeight(getWeight() + 2);
+			break;
+		case "young adult":
+			this.setWeight(getWeight() + 5);
 
+			break;
+		case "adult":
+			this.setWeight(getWeight() + 10);
+			break;
+		default:
+			this.setWeight(getWeight());
+			break;
 		}
 	}
 
 	@Override
 	public void reproduction() {
 		if (getGender().equals("F")) {
-			System.out.println(getName() + " will have a gestation period of 17-19 days. She will sit on the eggs from late afternoon to 10am");
-		} else if (getGender().equals("M")){
+			System.out.println(getName()
+					+ " will have a gestation period of 17-19 days. She will sit on the eggs from late afternoon to 10am");
+		} else if (getGender().equals("M")) {
 			System.out.println(getName() + " will do the day shift when looking after the eggs");
-		}
-		else {
+		} else {
 			System.out.println(getName() + " is complicated");
-		}			
+		}
 	}
 
 	@Override
 	public void sensitivity() {
 		// TODO Auto-generated method stub
-		
+
 	}
 
 }
