@@ -1,7 +1,24 @@
 package com.philli.zoopackage.main.java;
 
 public class Fish extends Animal implements Swim {
-
+/**
+ * 
+ * @param age
+ * @param name
+ * @param species
+ * @param weight
+ * @param height
+ * @param enclosure
+ * @param endangered
+ * @param nocturnal
+ * @param gender
+ * @param hoursAfterEating
+ * @param excretion
+ * @param stage
+ * @param enclosureSize
+ * @param respRate
+ * @param sensResp
+ */
 	public Fish(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
 			String enclosureSize, int respRate, String sensResp) {
