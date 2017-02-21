@@ -1,32 +1,35 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public class Bat extends Mammal implements Flying {
 
 	private int flightSpeed;
-/**
- * 
- * @param age
- * @param name
- * @param species
- * @param weight
- * @param height
- * @param worldOfWings
- * @param nocturnal
- * @param endangered
- * @param gender
- * @param hoursAfterEating
- * @param excretion
- * @param stage
- * @param enclosureSize
- * @param respRate
- * @param sensResp
- * @param flightSpeed
- */
-	public Bat(int age, String name, String species, int weight, int height, EnclosureType worldOfWings,
+
+	/**
+	 * 
+	 * @param age
+	 * @param name
+	 * @param species
+	 * @param weight
+	 * @param height
+	 * @param worldOfWings
+	 * @param nocturnal
+	 * @param endangered
+	 * @param gender
+	 * @param hoursAfterEating
+	 * @param excretion
+	 * @param stage
+	 * @param enclosureSize
+	 * @param respRate
+	 * @param sensResp
+	 * @param flightSpeed
+	 */
+	public Bat(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean nocturnal, boolean endangered, String gender, int hoursAfterEating, int excretion, String stage,
 			String enclosureSize, int respRate, String sensResp, int flightSpeed) {
-		super(age, name, species, weight, height, worldOfWings, nocturnal, endangered, gender, hoursAfterEating,
-				excretion, stage, enclosureSize, respRate, sensResp);
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, hoursAfterEating, excretion,
+				stage, enclosureSize, respRate, sensResp);
 		this.flightSpeed = flightSpeed;
 		// user defined
 	}
@@ -65,13 +68,17 @@ public class Bat extends Mammal implements Flying {
 	public void land() {
 		// land method
 		switch (flightSpeed) {
-		case 100: this.setRespRate(200);
+		case 100:
+			this.setRespRate(200);
 			break;
-		case 200: this.setRespRate(300);
+		case 200:
+			this.setRespRate(300);
 			break;
-		case 300: this.setRespRate(400);
+		case 300:
+			this.setRespRate(400);
 			break;
-		default: this.setRespRate(100);
+		default:
+			this.setRespRate(100);
 			break;
 		}
 	}

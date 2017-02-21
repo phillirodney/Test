@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public abstract class Mammal extends Animal implements Run {
 
 	public Mammal(int age, String name, String species, int weight, int height, EnclosureType enclosure,

@@ -26,10 +26,17 @@ public class AnimalTest {
 	Snake snake = new Snake(4, "Cola", "cornsnake", 5, 7, EnclosureType.REPTILE_CREEK, false, false, "F", false,
 			"black", "circles", 0, 0, "young adult", "large", 20, "shiver", 0);
 
-	@Test
+	/*@Test
 	public void testExcretion() {
 		penguin.excretion();
-		assertEquals(1, penguin.getExcretion());
+		assertEquals(4, penguin.getExcretion());
+	}*/
+	
+	@Test
+	public void testExcretionn() {
+		bat.excretion();
+		assertEquals(0, bat.getExcretion());
+
 	}
 
 	@Test

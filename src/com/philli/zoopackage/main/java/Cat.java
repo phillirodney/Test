@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public class Cat extends Mammal {
 
 	private boolean dangerous;

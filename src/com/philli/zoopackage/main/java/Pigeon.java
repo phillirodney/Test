@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public class Pigeon extends Bird implements Flying {
 
 	private int flightSpeed;

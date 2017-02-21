@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 /**
  * The Zoo does not want to create new reptiles only subclasses of Reptile
  *

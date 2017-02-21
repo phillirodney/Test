@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 abstract class Invertibrate extends Animal {
 
 	public Invertibrate(int age, String name, String species, int weight, int height, EnclosureType enclosure,

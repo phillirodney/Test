@@ -1,5 +1,7 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public class Fish extends Animal implements Swim {
 	private int swimSpeed;
 

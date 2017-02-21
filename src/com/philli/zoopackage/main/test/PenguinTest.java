@@ -9,7 +9,6 @@ import com.philli.zoopackage.main.java.Penguin;
 
 public class PenguinTest {
 	/**
-	 * 
 	 * @param age
 	 * @param name
 	 * @param species
@@ -28,11 +27,10 @@ public class PenguinTest {
 	 * @param enclosureSize
 	 * @param respRate
 	 * @param sensResp
+	 * @param swimSpeed
 	 */
-	Penguin p = new Penguin(24, "Marty", "Great Emperor", 9, 1, 
-			EnclosureType.PENGUIN_SHORES, false, false, "M",
-			"grey", 1.00, "complicated", 2, 0, "young adult",
-			"large", 0, null, 800);
+	Penguin p = new Penguin(24, "Marty", "Great Emperor", 9, 1, EnclosureType.PENGUIN_SHORES, false, false, "M", "grey",
+			1.00, "complicated", 2, 0, "young adult", "large", 0, "normal", 800);
 
 	/**
 	 * stage = young adult weight = 9 + 40
@@ -43,26 +41,9 @@ public class PenguinTest {
 		assertEquals(49, p.getWeight());
 	}
 
-	/**
-	 * gender = M excretion = 0 + 0
-	 */
-	@Test
-	public void testReproduction() {
-		p.reproduction();
-		assertEquals(0, p.getExcretion());
+	
 
-	}
-
-	/**
-	 * excretion = 0
-	 * sensresp = "normal"
-	 */
-	@Test
-	public void testSensitivity() {
-		p.sensitivity();
-		assertEquals("normal", p.getSensResp());
-
-	}
+	
 
 	@Test
 	public void testSwim() {
@@ -74,13 +55,13 @@ public class PenguinTest {
 	public void testGetSwimSpeed() {
 		assertEquals(800, p.getSwimSpeed());
 	}
-	
+
 	@Test
 	public void testSetSwimSpeed() {
 		p.setSwimSpeed(1000);
-		assertTrue(p.getSwimSpeed()==1000);
+		assertTrue(p.getSwimSpeed() == 1000);
 	}
-	
+
 	@Test
 	public void testGetRelationshipStatus() {
 		String rel = p.getRelationshipStatus();

@@ -1,6 +1,6 @@
 package com.philli.zoopackage.main.java;
-
-public abstract class Animal extends Enclosure implements LivingThing {
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+public abstract class Animal implements LivingThing {
 
 	private int age;
 	private String name;
@@ -16,6 +16,7 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	private String enclosureSize;
 	private int respRate;
 	private String sensResp;
+	protected EnclosureType enclosure;
 
 	/**
 	 * @param age
@@ -40,7 +41,7 @@ public abstract class Animal extends Enclosure implements LivingThing {
 	public Animal(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, int hoursAfterEating, int excretion, String stage,
 			String enclosureSize, int respRate, String sensResp) {
-		super(enclosure);
+		super();
 		this.age = age;
 		this.name = name;
 		this.species = species;
@@ -183,13 +184,10 @@ public abstract class Animal extends Enclosure implements LivingThing {
 		this.height = height;
 	}
 
-	@Override
-
 	public EnclosureType getEnclosureType() {
 		return enclosure;
 	}
 
-	@Override
 	public void setEnclosureType(EnclosureType enclosure) {
 		this.enclosure = enclosure;
 	}

@@ -1,9 +1,12 @@
 package com.philli.zoopackage.main.java;
 
+import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
+
 public class Penguin extends Bird implements Swim {
 
 	private String relationshipStatus;
 	private int swimSpeed;
+
 	/**
 	 * 
 	 * @param age
@@ -24,14 +27,14 @@ public class Penguin extends Bird implements Swim {
 	 * @param enclosureSize
 	 * @param respRate
 	 * @param sensResp
-	 * @param swimSpeed 
+	 * @param swimSpeed
 	 */
 	public Penguin(int age, String name, String species, int weight, int height, EnclosureType enclosure,
 			boolean endangered, boolean nocturnal, String gender, String featherColour, double wingSpan,
 			String relationshipStatus, int hoursAfterEating, int excretion, String stage, String enclosureSize,
 			int respRate, String sensResp, int swimSpeed) {
-		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, featherColour, wingSpan,
-				hoursAfterEating, excretion, stage, enclosureSize, respRate, sensResp);
+		super(age, name, species, weight, height, enclosure, endangered, nocturnal, gender, sensResp, hoursAfterEating, excretion,
+				swimSpeed, stage, enclosureSize, respRate, sensResp);
 		this.relationshipStatus = relationshipStatus;
 		this.swimSpeed = swimSpeed;
 	}
