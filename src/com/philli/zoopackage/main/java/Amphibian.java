@@ -11,4 +11,7 @@ public abstract class Amphibian extends Animal implements Swim {
 				stage, enclosureSize, respRate, sensResp);
 	}
 
+	Amphibian(int age, String name, String species){
+		super(age, name, species);
+	}
 }
