@@ -15,4 +15,7 @@ public abstract class Reptile extends Animal {
 				stage, enclosureSize, respRate, sensResp);
 	}
 
+	public Reptile(String name, String species, int hoursAfterEating, int excretion) {
+		super(name, species, hoursAfterEating, excretion);
+	}
 }

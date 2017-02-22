@@ -15,9 +15,9 @@ import com.philli.zoopackage.main.java.Enclosure.EnclosureType;
 public class AnimalTest {
 	Bat bat = new Bat(20, "Batley", "fruitbat", 2, 20, EnclosureType.WORLD_OF_WINGS, false, false, "F", 1, 0,
 			"young adult", "large", 0, "shiver", 800);
-	
-	Cat cat = new Cat(5, "Mr Floofy Poofs", "Ocelot", 11, 10, EnclosureType.FELINE_FUN, false, false,
-			"F", false, 0, 0, "young adult", "large", 0, "shiver");
+
+	Cat cat = new Cat(5, "Mr Floofy Poofs", "Ocelot", 11, 10, EnclosureType.FELINE_FUN, false, false, "F", false, 0, 0,
+			"young adult", "large", 0, "shiver");
 	Crocodile croc = new Crocodile(150, "noot noot", "broad snouted caiman", 80, 90, EnclosureType.REPTILE_CREEK, false,
 			false, "M", 0, 0, "young adult", "large", 0, "shiver");
 
@@ -27,9 +27,17 @@ public class AnimalTest {
 			false, "M", "pink", 0, "single", 3, 0, "young adult", "large", 0, "shiver", 100);
 	Snake snake = new Snake(4, "Cola", "cornsnake", 5, 7, EnclosureType.REPTILE_CREEK, false, false, "F", false,
 			"black", "circles", 0, 0, "young adult", "large", 20, "shiver", 0);
-	
+
+	Snake snake_four = new Snake("Julia", "rattle snake", 10, 10);
+
 	@Test
-	public void testExcretionn() {
+	public void testSnakeExcretion() {
+		snake_four.excretion();
+		assertEquals(11, snake_four.getExcretion());
+	}
+
+	@Test
+	public void testExcretion() {
 		bat.excretion();
 		assertEquals(0, bat.getExcretion());
 

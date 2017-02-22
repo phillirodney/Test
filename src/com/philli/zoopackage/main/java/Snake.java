@@ -43,6 +43,9 @@ public class Snake extends Reptile implements Swim {
 		this.swimSpeed = swimSpeed;
 
 	}
+	public Snake(String name, String species, int hoursAfterEating, int excretion){
+		super(species, species, excretion, excretion);
+	}
 
 	@Override
 	public void growth() {

@@ -67,6 +67,21 @@ public abstract class Animal implements LivingThing {
 		this.species = species;
 	}
 
+	public Animal(EnclosureType enclosure, int hoursAfterEating, int excretion, String stage, String enclosureSize, int respRate, String sensResp) {
+		this.enclosure = enclosure;
+		this.hoursAfterEating = hoursAfterEating;
+		this.excretion = excretion;
+		this.stage = stage;
+		this.enclosureSize = enclosureSize;
+		this.respRate = respRate;
+		this.sensResp = sensResp;
+	}
+	public Animal(String name, String species, int hoursAfterEating, int excretion) {
+		this.name = name;
+		this.species = species;
+		this.hoursAfterEating = hoursAfterEating;
+		this.excretion = excretion;
+	}
 	@Override
 	public void excretion() {
 
